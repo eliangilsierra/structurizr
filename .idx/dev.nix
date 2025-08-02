@@ -1,52 +1,61 @@
-# To learn more about how to use Nix to configure your environment
-# see: https://developers.google.com/idx/guides/customize-idx-env
 { pkgs, ... }: {
-  # Which nixpkgs channel to use.
-  channel = "stable-24.05"; # or "unstable"
-  # Use https://search.nixos.org/packages to find packages
+  channel = "stable-24.05";
+
   packages = [
-    # pkgs.go
-    # pkgs.python311
-    # pkgs.python311Packages.pip
-    # pkgs.nodejs_20
-    # pkgs.nodePackages.nodemon
+    pkgs.openjdk21
+    pkgs.cloudflared
+    pkgs.curl
+    pkgs.gnugrep
+    pkgs.coreutils
   ];
-  # Sets environment variables in the workspace
-  env = {};
+
   idx = {
-    # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
-    extensions = [
-      # "vscodevim.vim"
-    ];
-    # Enable previews
-    previews = {
-      enable = true;
-      previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
-      };
-    };
-    # Workspace lifecycle hooks
+    previews.enable = false;
+
     workspace = {
-      # Runs when a workspace is first created
-      onCreate = {
-        # Example: install JS dependencies from NPM
-        # npm-install = "npm install";
-        # Open editors for the following files by default, if they exist:
-        default.openFiles = [ ".idx/dev.nix" "README.md" ];
-      };
-      # Runs when the workspace is (re)started
       onStart = {
-        # Example: start a background task to watch and re-build backend code
-        # watch-backend = "npm run watch-backend";
+        lanzar-structurizr-lite = ''
+          set -e
+
+          FILE=structurizr-lite.war
+          URL=https://github.com/structurizr/lite/releases/download/v2025.05.28/structurizr-lite.war
+
+          echo "🛠️  Verificando archivo WAR..."
+
+          if [ ! -f "$FILE" ]; then
+            echo "⬇️  Descargando Structurizr Lite desde $URL..."
+            curl -L -f -o "$FILE" "$URL"
+          else
+            echo "📦 $FILE ya existe, omitiendo descarga."
+          fi
+
+          SIZE=$(stat -c%s "$FILE")
+          if [ "$SIZE" -lt 10000000 ]; then
+            echo "❌ ERROR: WAR corrupto o incompleto ($SIZE bytes)."
+            rm -f "$FILE"
+            exit 1
+          fi
+          echo "✅ WAR verificado correctamente ($SIZE bytes)"
+
+          echo "🚀 Iniciando Structurizr en puerto 8080..."
+          java -Dserver.port=8080 \
+               -Dstructurizr.apiKey=abc123 \
+               -Dstructurizr.allowInsecure=true \
+               -jar structurizr-lite.war ./workspace > structurizr.log 2>&1 &
+
+          sleep 5
+
+          echo "🌐 Iniciando túnel Cloudflared..."
+          cloudflared tunnel --url http://localhost:8080 | tee cloudflared.log &
+
+          echo "⏳ Esperando URL pública de Cloudflare..."
+          until grep -m1 -oE "https://[a-z0-9\\-]+\\.trycloudflare\\.com" cloudflared.log > cf-url.log; do
+            sleep 1
+          done
+
+          echo "✅ Túnel activo. URL pública:"
+          cat cf-url.log
+        '';
       };
     };
   };
