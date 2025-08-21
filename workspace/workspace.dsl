@@ -1,112 +1,174 @@
-workspace "Automatizacion CDA" {
+workspace "Automatización Revision Tecnico Mecanica" "Modelo de arquitectura C4 para el sistema de automatización de la RTM en un CDA." {
 
+    model {
+        properties {
+            "structurizr.groupSeparator" "/"
+        }
 
-  model {
-    propietario = person "Propietario del Vehículo" "Dueño del vehículo que agenda la cita" {
-      tags "Propietario"
-    }
-    tecnico = person "Técnico del CDA" "Funcionario que realiza la revisión técnica" {
-      tags "Tecnico"
-    }
+        actores = group "Actores del Sistema" {
+            propietario = person "Propietario del Vehículo" "Dueño del vehículo que agenda y gestiona la revisión."
+            tecnico = person "Técnico del CDA" "Funcionario que realiza la revisión y consulta resultados."
+            director = person "Director CDA" "Valida el cumplimiento y la emisión de certificados."
+        }
+        
+        sistema = softwareSystem "SIVIA" "Plataforma central para el agendamiento y la inspección automatizada." {
+            !docs docs
+            !adrs adrs
 
-    sistema = softwareSystem "Sistema de Agendamiento RTM" {
-      propietario -> this "Accede para agendar citas y subir documentos"
-      tecnico -> this "Revisa información y resultados"
-      
-      gw = container "Api Gateway" "Punto de entrada de todas las solicitudes Web" "Aws Gw" {
-          tag "Amazon Web Services - API Gateway"
-      }
+            interfaces = group "Interfaces de Usuario" {
+                webapp = container "Frontend Web" "Interfaz de usuario para agendamiento, pagos y seguimiento en tiempo real." "React" "Browser" {
+                    propietario -> this "Usa para agendar, pagar y seguir la revisión"
+                    tecnico -> this "Consulta información de citas" "HTTPS"
+                    director -> this "Consulta reportes y resultados" "HTTPS"
+                    
+                    ClientView = component "Vista Cliente" "Componente de UI para gestión de citas, pagos y seguimiento." "React Component"
+                    TechView = component "Vista Técnico" "Componente de UI para revisar vehículos agendados y monitorear inspección." "React Component"
+                    DirectorView = component "Vista Director" "Componente de UI para visualizar y aprobar reportes." "React Component"
+                    apiClient = component "Cliente API" "Encapsula la comunicación HTTP con el backend." "Axios"
 
-      webapp = container "Frontend Web" "Interfaz de usuario para agendamiento y seguimiento" "React" {
-          tag "Amazon Web Services - CloudFront"
-      }
-      balanceador = container "Balanceador de Carga" "Balancea la carga de solicitudes en los diferentes endpoints" "Aws Load Balancer" {
-          tag "Amazon Web Services - Elastic Load Balancing	"
-      }
-      api1 = container "API Backend 1" "Lógica de negocio, validación y conexión con IA" "Node.js + Express"{
-          tag "Amazon Web Services - EKS Cloud"
-      }
-      
-    api2 = container "API Backend 2" "Lógica de negocio, validación y conexión con IA" "Node.js + Express"{
-          tag "Amazon Web Services - EKS Cloud"
-      }
-      
-    api3 = container "API Backend 3" "Lógica de negocio, validación y conexión con IA" "Node.js + Express"{
-          tag "Amazon Web Services - EKS Cloud"
-      }
-      
-      
-      db = container "Base de Datos" "Guarda citas, usuarios, documentos" "PostgreSQL" {
-        tags "BD"
-      }
-      ia = container "SIVIA - Sistema de Inspección Visual Automatizado por IA" "Servicio de IA para validar fotos/documentos" "API externa (Python)"
+                    ClientView -> apiClient "Usa"
+                    TechView -> apiClient "Usa"
+                    DirectorView -> apiClient "Usa"
+                }
+            }
+            
+            serviciosBackend = group "Servicios de Backend" {
+                gw = container "API Gateway" "Punto de entrada único para todas las solicitudes del cliente." "Amazon API Gateway" {
+                    apiClient -> this "Realiza solicitudes" "HTTPS"
 
-      propietario -> webapp "Utiliza desde navegador"
-        webapp -> gw "Enruta Solicitudes"
-        gw -> balanceador "Balancea la carga de solicitudes"
-                balanceador -> api1 "Balancea la carga de solicitudes"
-                balanceador -> api2 "Balancea la carga de solicitudes"
-                balanceador -> api3 "Balancea la carga de solicitudes"
-      tecnico -> gw "Consulta información de citas"
-      api1 -> db "Lee y guarda datos"
-      api1 -> ia "Envía imágenes para validación"
-            api2 -> db "Lee y guarda datos"
-      api2 -> ia "Envía imágenes para validación"      
-      api3 -> db "Lee y guarda datos"
-      api3 -> ia "Envía imágenes para validación"
-    }
-  }
+                }
 
-  views {
-    systemContext sistema {
-      include *
-      autolayout lr
-      description "Diagrama de contexto del sistema de agendamiento RTM"
-    }
+                balanceador = container "Balanceador de Carga" "Distribuye el tráfico entrante entre las instancias de la API." "AWS Elastic Load Balancer" {
+                    gw -> this "Enruta tráfico"
+                }
 
-    container sistema {
-      include *
-      autolayout lr
-      description "Diagrama de contenedores: estructura interna del sistema"
-    }
+                IA = container "IA Procesamiento de imagenes" "IA entrenada para la identificación de defectos." "Google Cloud Vision AI / Vertex AI" {
+                    gw -> this "Enruta tráfico"
+                }                
 
-    styles {
-      element "Software System" {
-        background #801515
-        shape RoundedBox
-        icon https://cdn-icons-png.flaticon.com/512/8759/8759069.png
-      }
+                api = container "API de Negocio" "Provee la lógica de negocio, validaciones y orquestación de servicios." "Node.js + Express" {
+                    balanceador -> this "Recibe solicitudes"
 
-      element "Person" {
-        background #d46a6a
-        colour #000000
-        shape Person
-      }
+                    citasController = component "Controlador de Citas" "Gestiona las operaciones de agendamiento y pagos." "Express Controller"
+                    inspeccionController = component "Controlador de Inspección" "Gestiona el flujo de la inspección y notificaciones." "Express Controller"
+                    validacionService = component "Servicio de Validación" "Valida SOAT y otros documentos contra sistemas externos." "JavaScript"
+                    comunicacionIA = component "Cliente SIVIA" "Se comunica con el sistema de IA para enviar imágenes y recibir resultados." "Axios"
+                    repositorio = component "Repositorio de Datos" "Gestiona el acceso y la persistencia de datos." "Sequelize"
 
-      element "Propietario" {
-        shape Person
-        background #f4d03f
-      }
+                    citasController -> validacionService "Usa para validar SOAT"
+                    citasController -> repositorio "Persiste citas y pagos"
+                    inspeccionController -> comunicacionIA "Envía datos a SIVIA"
+                    inspeccionController -> repositorio "Guarda resultados de inspección"
+                }
 
-      element "Tecnico" {
-        shape Robot
-        background #76d7c4
-      }
-      
-    element "BD" {
-        shape Cylinder
-        background #3b5998
-        color #ffffff
-      }
+                database = container "Base de Datos" "Almacena datos de usuarios, citas, vehículos y resultados de la inspección." "PostgreSQL" "db" {
+                    repositorio -> this "Lee y escribe" "JDBC"
+                }
+            }
+        }
+        
+        sistemasExternos = group "Sistemas Externos" {
+            entidadesRegulatorias = softwareSystem "Entidades Regulatorias" "Sistemas como RUNT para validación de documentos." "Existing System" {
+                validacionService -> this "Consulta validez de SOAT" "SOAP/REST"
+            }
+            CamaraSET = softwareSystem "Set de Cámaras" "Set de Cámaras para inspección visual" "Existing System" {
+                validacionService -> this "Capturan imágenes para procesamiento"
+            }
+        }
 
-      relationship "Relationship" {
-        dashed false
-      }
+        deploymentEnvironment "Producción (Cloud AWS)" {
+            deploymentNode "Amazon Web Services" "" "us-east-1" {
+                tags "Amazon Web Services - Cloud"
+                
+                deploymentNode "Amazon CloudFront" "CDN para distribuir la interfaz de usuario." {
+                    tags "Amazon Web Services - CloudFront"
+                    containerInstance webapp
+                }
+
+                deploymentNode "Amazon API Gateway" "Servicio gestionado para APIs." {
+                    tags "Amazon Web Services - API Gateway"
+                    containerInstance gw
+                }
+
+                deploymentNode "Elastic Load Balancer" "Balanceador de carga de aplicación." {
+                    tags "Amazon Web Services - Elastic Load Balancing"
+                    containerInstance balanceador
+                }
+
+                deploymentNode "Amazon EKS" "Servicio de Kubernetes para orquestar los contenedores de la API." {
+                    tags "Amazon Web Services - EKS"
+                    deploymentNode "Nodo 1" "Instancia EC2" {
+                        containerInstance api
+                    }
+                    deploymentNode "Nodo 2" "Instancia EC2" {
+                        containerInstance api
+                    }
+                }
+
+                deploymentNode "Amazon RDS" "Servicio de Base de Datos relacional gestionada." {
+                    tags "Amazon Web Services - RDS"
+                    deploymentNode "Instancia PostgreSQL" {
+                        tags "Amazon Web Services - RDS PostgreSQL Instance"
+                        containerInstance database
+                    }
+                }
+            }
+        }
     }
     
-    theme https://static.structurizr.com/themes/amazon-web-services-2023.01.31/theme.json
+    views {
+        properties {
+            "plantuml.url" "https://plantuml.com/plantuml"
+        }
 
-  }
+        systemContext sistema "Contexto" "Diagrama de contexto del SIVIA." {
+            include *
+            autoLayout tb
+        }
+        container sistema "Contenedores" "Diagrama de contenedores del sistema." {
+            include *
+            autoLayout tb
+        }
+        component webapp "ComponentesFrontend" "Componentes de la aplicación web." {
+            include *
+            autoLayout tb
+        }
+        component api "ComponentesBackend" "Componentes de la API de Negocio." {
+            include *
+            autoLayout tb
+        }
 
+        deployment sistema "Producción (Cloud AWS)" "DespliegueCloud" "Describe la infraestructura de despliegue en producción sobre AWS."{
+            include *
+            autoLayout lr
+        }
+
+        
+        image api "SecuenciaAgendamiento" {
+            plantuml "seq.plant"
+            title "Diagrama de Secuencia - Agendamiento (Placeholder)"
+        }
+        
+        themes https://static.structurizr.com/themes/amazon-web-services-2023.01.31/theme.json
+
+        styles {
+            element "Component" {
+                shape Component
+            }
+            element "db" {
+                shape Cylinder
+            }
+            element "Browser" {
+                shape WebBrowser
+            }
+            element "Existing System" {
+                background #999999
+                color #ffffff
+            }
+            element "Person" {
+                shape Person
+                background #f4d03f
+            }
+        }
+    }
 }
-
