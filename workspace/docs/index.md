@@ -503,7 +503,7 @@ Y obtengo pre‑calificación por criterio con nivel de confianza
 
 1. Captura de imágenes → 2) Análisis por IA (**6.1/6.4**) → 3) Generación de reporte y notificaciones.
 
-## Anexo de Diagramas (código renderizable)
+## Anexo de Diagramas
 
 ### Diagrama de Clases (Mermaid)
 
@@ -581,6 +581,8 @@ classDiagram
     SIVIA --> DirectorCDA
 ```
 
+![Diagrama de Clases](./images/classDiagram1.png)
+
 ### Diagrama de Secuencia (Mermaid)
 
 ```mermaid
@@ -604,6 +606,7 @@ sequenceDiagram
   DirectorCDA ->> SIVIA: Aprobar Resultados
   SIVIA ->> Propietario: Notificar estado de inspección
 ```
+![Diagrama de Secuencia Mermaid](./images/sequenceDiagram1.png)
 
 ### Diagrama de Secuencia (Kroki / seqdiag)
 
@@ -634,6 +637,11 @@ seqdiag {
 }
 ```
 
+![Diagrama de Secuencia Kroki](./images/seqDiagram2.png)
+
+![Diagrama de Secuencia Kroki](./images/seqDiagram3.png)
+
+
 ### Diagrama de Secuencia (seqdiag)
 
 ```seqdiag
@@ -660,6 +668,7 @@ seqdiag {
   SIVIA -> Propietario [label = "Notificaciones estado de inspección"];
 }
 ```
+![Diagrama de Secuencia Mermaid](./images/seqDiagram4.png)
 
 ### Snippets y Herramientas de Documentación
 
@@ -672,8 +681,6 @@ cd structurizr-lite
 ./ui.sh
 ./gradlew build
 ```
-
-**Kroki:** los bloques `kroki-seqdiag` y `mermaid` pueden renderizarse automáticamente en plataformas compatibles (Confluence, MkDocs, etc.).
 
 ---
 
