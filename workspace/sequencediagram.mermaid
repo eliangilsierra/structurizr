@@ -1,0 +1,22 @@
+---
+config:
+  look: classic
+  theme: redux-color
+---
+sequenceDiagram
+  actor Propietario as Propietario
+  participant SIVIA as SIVIA
+  participant CamarasVision as CamarasVision
+  Actor Operario as Operario
+  Actor DirectorCDA as DirectorCDA
+  Propietario ->> SIVIA: Agendar Cita
+  SIVIA ->> Propietario: Solicitar Documentos
+  Propietario ->> SIVIA: Subir Documentación
+  SIVIA ->> RUNT : Enviar documentacio´n para validar
+  SIVIA ->> Propietario: Confirmar Cita
+  Propietario ->> Operario: Entrega vehículo en CDA
+  Operario ->> SIVIA: Entrega el vehículo para inspección.
+  SIVIA ->> Operario: Análisis NTC 5375 (6.1 y 6.4)
+  Operario ->> DirectorCDA: Enviar checklist y resultados
+  DirectorCDA ->> SIVIA: Aprobar Resultados
+  SIVIA ->> Propietario: Notificar estado de inspección
