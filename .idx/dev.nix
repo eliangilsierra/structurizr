@@ -20,7 +20,7 @@
           FILE=structurizr-lite.war
           URL=https://github.com/structurizr/lite/releases/download/v2025.05.28/structurizr-lite.war
 
-          echo "🛠️  Verificando archivo WAR..."
+          echo "🛠️  Verificando archivo WAR...."
 
           if [ ! -f "$FILE" ]; then
             echo "⬇️  Descargando Structurizr Lite desde $URL..."

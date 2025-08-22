@@ -11,7 +11,7 @@ workspace "Automatización Revision Tecnico Mecanica" "Modelo de arquitectura C4
             director = person "Director CDA" "Valida el cumplimiento y la emisión de certificados."
         }
         
-        sistema = softwareSystem "SIVIA" "Plataforma central para el agendamiento y la inspección automatizada." {
+        sistema = softwareSystem "Plataforma central para el agendamiento y la inspección automatizada 'SIVIA'" {
             !docs docs
             !adrs adrs
 
@@ -116,59 +116,62 @@ workspace "Automatización Revision Tecnico Mecanica" "Modelo de arquitectura C4
         }
     }
     
-    views {
-        properties {
-            "plantuml.url" "https://plantuml.com/plantuml"
-        }
 
-        systemContext sistema "Contexto" "Diagrama de contexto del SIVIA." {
-            include *
-            autoLayout tb
-        }
-        container sistema "Contenedores" "Diagrama de contenedores del sistema." {
-            include *
-            autoLayout tb
-        }
-        component webapp "ComponentesFrontend" "Componentes de la aplicación web." {
-            include *
-            autoLayout tb
-        }
-        component api "ComponentesBackend" "Componentes de la API de Negocio." {
-            include *
-            autoLayout tb
-        }
+views {
+    properties {
+        "plantuml.url" "https://plantuml.com/plantuml"
+    }
 
-        deployment sistema "Producción (Cloud AWS)" "DespliegueCloud" "Describe la infraestructura de despliegue en producción sobre AWS."{
-            include *
-            autoLayout lr
-        }
+    systemContext sistema VistaContexto "Diagrama de contexto del SIVIA." {
+        include *
+        autoLayout tb
+    }
 
-        
-        image api "SecuenciaAgendamiento" {
-            plantuml "seq.plant"
-            title "Diagrama de Secuencia - Agendamiento (Placeholder)"
-        }
-        
-        themes https://static.structurizr.com/themes/amazon-web-services-2023.01.31/theme.json
+    container sistema VistaContenedores "Diagrama de contenedores del sistema." {
+        include *
+        autoLayout tb
+    }
 
-        styles {
-            element "Component" {
-                shape Component
-            }
-            element "db" {
-                shape Cylinder
-            }
-            element "Browser" {
-                shape WebBrowser
-            }
-            element "Existing System" {
-                background #999999
-                color #ffffff
-            }
-            element "Person" {
-                shape Person
-                background #f4d03f
-            }
+    component webapp VistaFrontend "Componentes de la aplicación web." {
+        include *
+        autoLayout tb
+    }
+
+    component api VistaBackend "Componentes de la API de Negocio." {
+        include *
+        autoLayout tb
+    }
+
+    deployment * "Producción (Cloud AWS)" {
+        include *
+        autoLayout lr
+    }
+
+    image api SecuenciaAgendamiento {
+        plantuml "seq.plant"
+        title "Diagrama de Secuencia - Agendamiento (Placeholder)"
+    }
+
+    themes https://static.structurizr.com/themes/amazon-web-services-2023.01.31/theme.json
+
+    styles {
+        element "Component" {
+            shape Component
+        }
+        element "db" {
+            shape Cylinder
+        }
+        element "Browser" {
+            shape WebBrowser
+        }
+        element "Existing System" {
+            background #999999
+            color #ffffff
+        }
+        element "Person" {
+            shape Person
+            background #f4d03f
         }
     }
+}
 }
