@@ -1,55 +1,54 @@
-2025-08-02T19:51:50.186Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Starting StructurizrLite using Java 21.0.3 with PID 209 (/home/user/structurizr/structurizr-lite.war started by user in /home/user/structurizr)
-2025-08-02T19:51:50.201Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : No active profile set, falling back to 1 default profile: "default"
-2025-08-02T19:52:05.614Z ERROR 209 --- [           main] .s.l.c.s.ApacheLuceneSearchComponentImpl : java.nio.file.NoSuchFileException: ./workspace/.structurizr/index
-2025-08-02T19:52:05.831Z  WARN 209 --- [           main] o.a.l.i.v.VectorizationProvider          : Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
+2025-08-22T14:41:09.746Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Starting StructurizrLite using Java 21.0.3 with PID 185 (/home/user/structurizr/structurizr-lite.war started by user in /home/user/structurizr)
+2025-08-22T14:41:09.773Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : No active profile set, falling back to 1 default profile: "default"
+2025-08-22T14:41:23.859Z  WARN 185 --- [           main] o.a.l.i.v.VectorizationProvider          : Java vector incubator module is not readable. For optimal vector performance, pass '--add-modules jdk.incubator.vector' to enable Vector API.
 WARNING: A restricted method in java.lang.foreign.Linker has been called
 WARNING: java.lang.foreign.Linker::downcallHandle has been called by the unnamed module
 WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for this module
 
-2025-08-02T19:52:07.292Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Started StructurizrLite in 19.938 seconds (process running for 23.875)
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : ***********************************************************************************
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :   _____ _                   _              _          
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :  / ____| |                 | |            (_)         
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ _ _____ __ 
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :  \___ \| __| '__| | | |/ __| __| | | | '__| |_  / '__|
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :  ____) | |_| |  | |_| | (__| |_| |_| | |  | |/ /| |   
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  |_/___|_|   
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :                                                       
-2025-08-02T19:52:07.299Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Structurizr Lite
-2025-08-02T19:52:07.302Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :  - build: 2025.05.28 (2025-05-28T10:43:05Z)
-2025-08-02T19:52:07.310Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :  - structurizr-java: v4.1.0
-2025-08-02T19:52:07.354Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :  - structurizr-dsl: v4.1.0
-2025-08-02T19:52:07.359Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     :  - structurizr-graphviz: v4.1.0
-2025-08-02T19:52:07.362Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : 
-2025-08-02T19:52:07.362Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Workspace path: /home/user/structurizr/./workspace
-2025-08-02T19:52:07.363Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Workspace filename: workspace[.dsl|.json]
-2025-08-02T19:52:07.364Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Workspaces: 1
-2025-08-02T19:52:07.365Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : URL: 
-2025-08-02T19:52:07.368Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Auto-save interval: 5000ms
-2025-08-02T19:52:07.368Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Auto-refresh interval: 0ms
-2025-08-02T19:52:07.369Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Preview features: false
-2025-08-02T19:52:07.444Z  WARN 209 --- [           main] com.structurizr.lite.StructurizrLite     : Cannot run program "dot": error=2, No such file or directory
-2025-08-02T19:52:07.454Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Graphviz (dot): false
-2025-08-02T19:52:07.459Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : ***********************************************************************************
-2025-08-02T19:52:07.460Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : MIT License
-2025-08-02T19:52:07.460Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : 
-2025-08-02T19:52:07.460Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Copyright (c) 2024 Structurizr Limited
-2025-08-02T19:52:07.460Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : 
-2025-08-02T19:52:07.460Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : Permission is hereby granted, free of charge, to any person obtaining a copy
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : of this software and associated documentation files (the "Software"), to deal
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : in the Software without restriction, including without limitation the rights
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : copies of the Software, and to permit persons to whom the Software is
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : furnished to do so, subject to the following conditions:
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : 
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : The above copyright notice and this permission notice shall be included in all
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : copies or substantial portions of the Software.
-2025-08-02T19:52:07.461Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : 
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : SOFTWARE.
-2025-08-02T19:52:07.462Z  INFO 209 --- [           main] com.structurizr.lite.StructurizrLite     : ***********************************************************************************
+2025-08-22T14:41:25.249Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Started StructurizrLite in 17.853 seconds (process running for 25.998)
+2025-08-22T14:41:25.265Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : ***********************************************************************************
+2025-08-22T14:41:25.267Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :   _____ _                   _              _          
+2025-08-22T14:41:25.268Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :  / ____| |                 | |            (_)         
+2025-08-22T14:41:25.268Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : | (___ | |_ _ __ _   _  ___| |_ _   _ _ __ _ _____ __ 
+2025-08-22T14:41:25.268Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :  \___ \| __| '__| | | |/ __| __| | | | '__| |_  / '__|
+2025-08-22T14:41:25.268Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :  ____) | |_| |  | |_| | (__| |_| |_| | |  | |/ /| |   
+2025-08-22T14:41:25.268Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : |_____/ \__|_|   \__,_|\___|\__|\__,_|_|  |_/___|_|   
+2025-08-22T14:41:25.268Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :                                                       
+2025-08-22T14:41:25.268Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Structurizr Lite
+2025-08-22T14:41:25.269Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :  - build: 2025.05.28 (2025-05-28T10:43:05Z)
+2025-08-22T14:41:25.286Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :  - structurizr-java: v4.1.0
+2025-08-22T14:41:25.325Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :  - structurizr-dsl: v4.1.0
+2025-08-22T14:41:25.336Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     :  - structurizr-graphviz: v4.1.0
+2025-08-22T14:41:25.337Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : 
+2025-08-22T14:41:25.341Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Workspace path: /home/user/structurizr/./workspace
+2025-08-22T14:41:25.342Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Workspace filename: workspace[.dsl|.json]
+2025-08-22T14:41:25.342Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Workspaces: 1
+2025-08-22T14:41:25.342Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : URL: 
+2025-08-22T14:41:25.344Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Auto-save interval: 5000ms
+2025-08-22T14:41:25.344Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Auto-refresh interval: 0ms
+2025-08-22T14:41:25.344Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Preview features: false
+2025-08-22T14:41:25.408Z  WARN 185 --- [           main] com.structurizr.lite.StructurizrLite     : Cannot run program "dot": error=2, No such file or directory
+2025-08-22T14:41:25.409Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Graphviz (dot): false
+2025-08-22T14:41:25.409Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : ***********************************************************************************
+2025-08-22T14:41:25.409Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : MIT License
+2025-08-22T14:41:25.409Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : 
+2025-08-22T14:41:25.409Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Copyright (c) 2024 Structurizr Limited
+2025-08-22T14:41:25.410Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : 
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : Permission is hereby granted, free of charge, to any person obtaining a copy
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : of this software and associated documentation files (the "Software"), to deal
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : in the Software without restriction, including without limitation the rights
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : copies of the Software, and to permit persons to whom the Software is
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : furnished to do so, subject to the following conditions:
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : 
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : The above copyright notice and this permission notice shall be included in all
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : copies or substantial portions of the Software.
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : 
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+2025-08-22T14:41:25.411Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+2025-08-22T14:41:25.412Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+2025-08-22T14:41:25.413Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+2025-08-22T14:41:25.413Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+2025-08-22T14:41:25.413Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+2025-08-22T14:41:25.413Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : SOFTWARE.
+2025-08-22T14:41:25.413Z  INFO 185 --- [           main] com.structurizr.lite.StructurizrLite     : ***********************************************************************************

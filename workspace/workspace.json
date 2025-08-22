@@ -3,8 +3,7 @@
   "description" : "Modelo de arquitectura C4 para el sistema de automatización de la RTM en un CDA.",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2025-08-02T19:52:15Z",
+  "lastModifiedDate" : "2025-08-22T14:44:12Z",
   "model" : {
     "deploymentNodes" : [ {
       "children" : [ {
@@ -15,7 +14,7 @@
           "id" : "50",
           "instanceId" : 1,
           "properties" : {
-            "structurizr.dsl.identifier" : "7c590b36-3059-4970-b307-216a86b66a59"
+            "structurizr.dsl.identifier" : "d84fe712-384b-48cd-834c-ba402b228656"
           },
           "relationships" : [ {
             "description" : "Realiza solicitudes",
@@ -33,7 +32,7 @@
         "instances" : "1",
         "name" : "Amazon CloudFront",
         "properties" : {
-          "structurizr.dsl.identifier" : "cb51c0cc-9e54-4cd2-8343-459a13a1bf06"
+          "structurizr.dsl.identifier" : "8c3b11ac-d143-4cb9-be50-a44a1edd2d53"
         },
         "tags" : "Element,Deployment Node,Amazon Web Services - CloudFront"
       }, {
@@ -44,7 +43,7 @@
           "id" : "52",
           "instanceId" : 1,
           "properties" : {
-            "structurizr.dsl.identifier" : "6731d56e-3882-4c59-9824-672617055353"
+            "structurizr.dsl.identifier" : "e18271fe-cfe0-4d6e-a0f1-e1a0442f4098"
           },
           "relationships" : [ {
             "description" : "Enruta tráfico",
@@ -61,7 +60,7 @@
         "instances" : "1",
         "name" : "Amazon API Gateway",
         "properties" : {
-          "structurizr.dsl.identifier" : "a3e57c73-a3ba-49fa-af1e-beacd1daf452"
+          "structurizr.dsl.identifier" : "14e24d0b-b70a-4e12-9594-76013e89e6de"
         },
         "tags" : "Element,Deployment Node,Amazon Web Services - API Gateway"
       }, {
@@ -72,7 +71,7 @@
           "id" : "55",
           "instanceId" : 1,
           "properties" : {
-            "structurizr.dsl.identifier" : "2490a06f-6c65-4d86-8a65-e5f71c5400db"
+            "structurizr.dsl.identifier" : "11456c5e-a4b6-4353-952c-98f6e1931147"
           },
           "relationships" : [ {
             "description" : "Recibe solicitudes",
@@ -95,7 +94,7 @@
         "instances" : "1",
         "name" : "Elastic Load Balancer",
         "properties" : {
-          "structurizr.dsl.identifier" : "9b751779-1c72-42f0-a034-ce6c9bbe7e7b"
+          "structurizr.dsl.identifier" : "97cee3e5-5535-4d11-816f-3c4e1f334f00"
         },
         "tags" : "Element,Deployment Node,Amazon Web Services - Elastic Load Balancing"
       }, {
@@ -107,7 +106,7 @@
             "id" : "59",
             "instanceId" : 1,
             "properties" : {
-              "structurizr.dsl.identifier" : "c3ff4857-004c-49dd-8bb5-9e69f53db84f"
+              "structurizr.dsl.identifier" : "62db009c-ff4b-4f15-9e6d-3483f49db53b"
             },
             "relationships" : [ {
               "description" : "Lee y escribe",
@@ -125,7 +124,7 @@
           "instances" : "1",
           "name" : "Nodo 1",
           "properties" : {
-            "structurizr.dsl.identifier" : "03fadb25-6e6e-4090-b49c-4a7c1d6e9a8d"
+            "structurizr.dsl.identifier" : "e1cc5c1a-34f6-4f1b-b591-a0440176800f"
           },
           "tags" : "Element,Deployment Node"
         }, {
@@ -136,7 +135,7 @@
             "id" : "62",
             "instanceId" : 1,
             "properties" : {
-              "structurizr.dsl.identifier" : "a62debbc-ea46-4f1a-bd05-37e1fc73aa6e"
+              "structurizr.dsl.identifier" : "e2130fd2-2b21-467a-af4a-45e48e09d488"
             },
             "relationships" : [ {
               "description" : "Lee y escribe",
@@ -154,7 +153,7 @@
           "instances" : "1",
           "name" : "Nodo 2",
           "properties" : {
-            "structurizr.dsl.identifier" : "014c6576-a855-4e82-9f0f-cf54c5f68ff6"
+            "structurizr.dsl.identifier" : "89861d46-a621-45be-9d47-edabffbcfe59"
           },
           "tags" : "Element,Deployment Node"
         } ],
@@ -164,7 +163,7 @@
         "instances" : "1",
         "name" : "Amazon EKS",
         "properties" : {
-          "structurizr.dsl.identifier" : "cec580b4-c70f-4680-9544-59d3106a33d6"
+          "structurizr.dsl.identifier" : "5e6793ab-21cc-4a3f-9634-077a5ebb8e17"
         },
         "tags" : "Element,Deployment Node,Amazon Web Services - EKS"
       }, {
@@ -176,7 +175,7 @@
             "id" : "66",
             "instanceId" : 1,
             "properties" : {
-              "structurizr.dsl.identifier" : "77a07513-b5f6-4154-8375-64594a89f9b5"
+              "structurizr.dsl.identifier" : "c96da424-2084-4979-8cae-7969ab0c689b"
             },
             "tags" : "Container Instance"
           } ],
@@ -185,7 +184,7 @@
           "instances" : "1",
           "name" : "Instancia PostgreSQL",
           "properties" : {
-            "structurizr.dsl.identifier" : "19adbccd-3a28-48d8-a651-cf2fe036ac78"
+            "structurizr.dsl.identifier" : "7d3d9422-3df1-48dd-9418-fe1c846b20a7"
           },
           "tags" : "Element,Deployment Node,Amazon Web Services - RDS PostgreSQL Instance"
         } ],
@@ -195,7 +194,7 @@
         "instances" : "1",
         "name" : "Amazon RDS",
         "properties" : {
-          "structurizr.dsl.identifier" : "2f76724e-3932-435b-bd36-e66e875e223c"
+          "structurizr.dsl.identifier" : "801400ec-0413-494e-8053-0412dd864184"
         },
         "tags" : "Element,Deployment Node,Amazon Web Services - RDS"
       } ],
@@ -204,7 +203,7 @@
       "instances" : "1",
       "name" : "Amazon Web Services",
       "properties" : {
-        "structurizr.dsl.identifier" : "4596314c-2f62-4b41-8409-6b409bf8d821"
+        "structurizr.dsl.identifier" : "a418b8e4-43fe-4ccc-ab86-9572e1ec0823"
       },
       "tags" : "Element,Deployment Node,Amazon Web Services - Cloud",
       "technology" : "us-east-1"
@@ -576,14 +575,14 @@
       "documentation" : {
         "decisions" : [ {
           "content" : "# 1. Cambio de almacenamiento\n\nDate: 2022-06-05\n\n## Status\n\nAccepted\n\n## Context\n\nCambios en los requerimientos de almacenamiento.\n\n## Decision\n\nComo no existe relacionalidad se opta por otro modelo de almacenamiento\n\n## Consequences\n\nInclusión de Elastic Search como tecnología de almacenamiento y búsqueda",
-          "date" : "2022-06-05T05:00:00Z",
+          "date" : "2022-06-05T00:00:00Z",
           "format" : "Markdown",
           "id" : "1",
           "status" : "Accepted",
           "title" : "Cambio de almacenamiento"
         }, {
           "content" : "# 1. Record architecture decisions\n\nDate: 2023-06-05\n\n## Status\n\nAccepted\n\n## Context\n\nWe need to record the architectural decisions made on this project.\n\n## Decision\n\nWe will use Architecture Decision Records, as described by Michael Nygard in this article: [http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions)\n\n## Consequences\n\nSee Michael Nygard's article, linked above.",
-          "date" : "2023-06-05T05:00:00Z",
+          "date" : "2023-06-05T00:00:00Z",
           "format" : "Markdown",
           "id" : "2",
           "status" : "Accepted",
@@ -595,20 +594,20 @@
           "type" : "image/png"
         } ],
         "sections" : [ {
-          "content" : "# T&iacute;tulo (IGNORADO)\r\n\r\nTexto\r\n\r\n## Descripción del proyecto:\r\n\r\nSe realizará la automatización de la inspección visual de elementos externos en el RTM \r\n\r\nEstos elementos son inspeccionados bajo la norma: [NTC5375](https://bogota.gov.co/sites/default/files/tys/2017/11/ntc-5375.pdf)\r\n\r\n\r\n\r\nEjemplo de lista:\r\n\r\n- item 1\r\n- item 2\r\n\r\nEjemplo de lista numerada:\r\n\r\n1. Uno\r\n2. Dos\r\n3. Tres\r\n\r\nEjemplo de código:\r\n\r\n```\r\ngit clone https://github.com/structurizr/lite.git structurizr-lite\r\ngit clone https://github.com/structurizr/ui.git structurizr-ui\r\ncd structurizr-lite\r\n./ui.sh\r\n./gradlew build\r\n```\r\n\r\nEjemplo de Diagrama 2:\r\n\r\n![Diagrama de ejemplo](embed:Cloud)\r\n\r\nEjemplo de imágen externa:\r\n\r\n![Imágen Externa](https://i.ytimg.com/vi/C0g-4PABmtY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAxNNcrpdEN0hGN6VLjrQSdmS_5Qg)\r\n\r\nEjemplo de imágen interna:\r\n\r\n![Imágen Interna](images/photo.png)\r\n\r\n## Mermaid code example\r\n\r\nEjemplo file de Mermaid:\r\n\r\n```mermaid\r\ngraph TD\r\n  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )\r\n  B --> C{ How to contribute? }\r\n  C --> D[ Reporting bugs ]\r\n  C --> E[ Sharing ideas ]\r\n  C --> F[ Advocating ]\r\n```\r\n\r\n## Mermaid example desde C4:\r\n\r\nEjemplo Mermaid desde C4:\r\n![Diagrama Mermaid de ejemplo](embed:Mermaid)\r\n",
-          "filename" : "\\index.md",
+          "content" : "# Automatización Revisión Técnico-Mecánica (RTM)\n\nEl proyecto busca **automatizar la inspección visual de los vehículos** en el proceso de Revisión Técnico-Mecánica (RTM) en los CDA, reduciendo la subjetividad, aumentando la trazabilidad y mejorando la eficiencia operativa. La solución prioriza los numerales **6.1 (Revisión exterior)** y **6.4 (Alumbrado y señalización)** de la **NTC 5375**, integrando analítica de imágenes, reglas normativas y notificaciones en tiempo real.\n\n---\n\n## Descripción del proyecto\n\nSe realizará la **automatización de la inspección visual de elementos externos** en el RTM mediante el **SIVIA (Sistema de Inspección Visual Automatizado por IA)**. El sistema:\n- Recibe citas y pagos en línea, validando **SOAT** y datos básicos.\n- Captura imágenes del vehículo, identifica **tipología** y aplica los **checklists** correspondientes según la **NTC 5375**.\n- Clasifica defectos exteriores y de alumbrado/señalización con un **Motor de IA**.\n- Genera resultados con **criterios de aceptación normativos**, enviando reportes al **Director del CDA** y notificaciones al **Propietario**.\n- Emite reportes con **trazabilidad** y **auditorías automatizadas** para reguladores.\n\nEstos elementos son inspeccionados bajo la norma: [NTC5375](https://bogota.gov.co/sites/default/files/tys/2017/11/ntc-5375.pdf)\n\n---\n\n## Contexto y problema\n\nActualmente, el proceso de revisión se realiza de manera manual, generando:  \n- Filas largas por atención en orden de llegada.  \n- Pagos presenciales en efectivo y manejo de comprobantes físicos.  \n- Dependencia de la inspección **visual/sensorial** del operario.  \n- **Subjetividad y variabilidad** en los resultados.  \n- Baja trazabilidad y oportunidades de **fraude** (ausencia de auditorías digitales).  \n\n**Dolores clave:** tiempos elevados, resultados inconsistentes, poca transparencia para el usuario y carga administrativa para el CDA.\n\n---\n\n## Objetivos de negocio (ON)\n\n1. **ON-1**: Reducir en **99%** el tiempo promedio de revisión mediante procesos automatizados (12 meses).  \n2. **ON-2**: Disminuir la variabilidad de inspecciones en **80%**, mitigando sesgos subjetivos con diagnóstico automatizado (12 meses).  \n3. **ON-3**: Implementar un sistema **digital con IA** que sustituya el proceso manual en al menos el **90%** de las revisiones.  \n4. **ON-4**: Aumentar en **90%** la **trazabilidad y transparencia** del proceso con auditorías y reportes digitales (6 meses).  \n\n---\n\n## Criterios de éxito (CE)\n\n- **CE-1**: Aprobación del flujo automatizado por **reguladores** (RUNT/Dirección de Tránsito).  \n- **CE-2**: Reducción demostrable del **tiempo total de inspección** respecto a la línea base.  \n- **CE-3**: Disminución significativa de la **variabilidad inter-operario** en hallazgos.  \n- **CE-4**: **Disponibilidad** ≥ 99% del módulo de inspección y notificaciones en ventana operativa.  \n- **CE-5**: **Trazabilidad** completa (evidencia multimedia, hash de registros, bitácoras de auditoría).  \n\n---\n\n## Actores y necesidades\n\n- **Propietario del vehículo**: agendar, pagar, recibir notificaciones y resultados claros.  \n- **Operario/Inspector**: supervisar el proceso automatizado y validar hallazgos críticos.  \n- **Director del CDA**: revisar informes y **aprobar/rechazar** emisión de certificado RTM.  \n- **Reguladores (RUNT / Dirección de Tránsito)**: recibir reportes oficiales estructurados y auditables.  \n\n---\n\n## Alcance, limitaciones y exclusiones\n\n- **Alcance**: inspección de **numerales 6.1 y 6.4** con evaluación de **defectos externos**.  \n- **LI-1**: La revisión de alumbrado/señalización (**6.4**) se limita a **defectos externos**.  \n- **EX-1**: Se excluyen revisiones fuera de **6.1** y **6.4**, así como pruebas mecánicas internas.  \n\n---\n\n## Requerimientos funcionales (RF)\n\n- **RF-1**: **Agendamiento online** con pagos en línea y validación automática de **SOAT**.  \n- **RF-2**: **SIVIA** para revisión exterior y alumbrado, con calificación según **NTC 5375**.  \n- **RF-3**: **Identificación de tipología de vehículo** y selección dinámica del **checklist**.  \n- **RF-4**: **Tracking en tiempo real** y **notificaciones** de estado al propietario.  \n- **RF-5**: **Reportes y auditoría** con evidencias (imágenes), sellos de tiempo y exportación para reguladores.  \n\n---\n\n## Historias de usuario (ejemplos)\n\n- **Como Propietario**, quiero **agendar y pagar en línea** para evitar filas y manejar todo desde mi móvil.  \n- **Como Inspector**, quiero **visualizar los hallazgos del Motor IA** para validar rápidamente los resultados.  \n- **Como Director del CDA**, quiero **recibir un informe consolidado** con criterios NTC para decidir sobre el certificado.  \n- **Como Regulador**, quiero **reportes estructurados y auditables** para supervisión y trazabilidad.  \n\n---\n\n## Criterios de aceptación (muestra)\n\n- Si el SOAT está **vigente**, el sistema permite **confirmar la cita**; si no, **rechaza** y notifica.  \n- Para un vehículo de tipo **motocicleta**, SIVIA aplica **checklist** correspondiente y registra evidencias.  \n- Cada hallazgo genera **evidencia** (imagen), **clasificación** (defecto menor/mayor), **timestamp** y **usuario responsable**.  \n- Las **notificaciones** reflejan el estado: *en inspección*, *hallazgos detectados*, *aprobado/rechazado*, *reporte disponible*.  \n\n---\n\n## Ejemplos de listas\n\n- Integración con cámaras de visión.  \n- Persistencia en base de datos con trazabilidad.  \n- Panel para director y reguladores.  \n\n**Lista numerada:**  \n1. Captura de imágenes.  \n2. Análisis por IA (6.1, 6.4).  \n3. Generación de reporte y notificaciones.  \n\n---\n\n## Ejemplo de código\n\n```bash\ngit clone https://github.com/structurizr/lite.git structurizr-lite\ngit clone https://github.com/structurizr/ui.git structurizr-ui\ncd structurizr-lite\n./ui.sh\n./gradlew build\n```\n\n---\n\n## Ejemplo de Diagrama (referencia)\n\n![Diagrama de Contexto](embed:Cloud)\n\n---\n\n## Diagrama de Clases: Automatización CDA (Mermaid)\n\n```mermaid\nclassDiagram\n    class Vehiculo {\n        +String placa\n        +String tipo\n        +String marca\n        +String modelo\n        +getInfo()\n    }\n\n    class Propietario {\n        +String nombre\n        +String correo\n        +String telefono\n        +getVehiculos()\n    }\n\n    class Inspeccion {\n        +Date fecha\n        +String estado\n        +String resultado\n        +iniciar()\n        +obtenerResultado()\n    }\n\n    class Checklist {\n        +String tipoVehiculo\n        +List criterios\n        +evaluar()\n    }\n\n    class Pago {\n        +String metodo\n        +Date fecha\n        +float monto\n        +String estado\n        +procesar()\n    }\n\n    class Notificacion {\n        +Date fecha\n        +String mensaje\n        +enviar()\n    }\n\n    class SIVIA {\n        +capturarImagenes()\n        +identificarTipoVehiculo()\n        +evaluarChecklist()\n        +enviarResultados()\n    }\n\n    class MotorIA {\n        +analizarImagen()\n        +clasificarDefectos()\n    }\n\n    class DirectorCDA {\n        +String nombre\n        +revisarInforme()\n        +aprobarCertificado()\n    }\n\n    Vehiculo --> Propietario\n    Inspeccion --> Vehiculo\n    Inspeccion --> Checklist\n    Inspeccion --> SIVIA\n    SIVIA --> MotorIA\n    Pago --> Vehiculo\n    Notificacion --> Propietario\n    SIVIA --> Notificacion\n    SIVIA --> DirectorCDA\n```\n\n---\n\n## Diagrama de Secuencia (Kroki / seqdiag)\n\n> Útil para Documentos/Confluence que integren **Kroki**. Si tu entorno de Structurizr Docs tiene soporte Kroki habilitado, este bloque se renderiza automáticamente.\n\n```kroki-seqdiag\nseqdiag {\n  activation = none;\n\n  Propietario;\n  SIVIA;\n  SistemaBaseDatos;\n  CamarasVision;\n  MotorIA;\n  DirectorCDA;\n\n  Propietario -> SIVIA [label = \"Agendar Cita\"];\n  SIVIA -> Propietario [label = \"Solicitar Documentos\"];\n  Propietario -> SIVIA [label = \"Subir Documentación\"];\n  SIVIA -> Propietario [label = \"Confirmar Cita\"];\n  Propietario -> SIVIA [label = \"Entrega vehículo en CDA\"];\n  SIVIA -> SistemaBaseDatos [label = \"Identificar tipología del vehículo\"];\n  SIVIA -> CamarasVision [label = \"Capturar imágenes\"];\n  SIVIA -> MotorIA [label = \"Análisis NTC 5375 (6.1 y 6.4)\"];\n  SIVIA -> DirectorCDA [label = \"Enviar checklist y resultados\"];\n  DirectorCDA -> SIVIA [label = \"Aprobar Resultados\"];\n  SIVIA -> Propietario [label = \"Notificaciones estado de inspección\"];\n}\n```\n\n> Si tu visor **no** reconoce `kroki-seqdiag`, conserva el mismo contenido con el fence genérico `seqdiag`:\n\n```seqdiag\nseqdiag {\n  activation = none;\n\n  Propietario;\n  SIVIA;\n  SistemaBaseDatos;\n  CamarasVision;\n  MotorIA;\n  DirectorCDA;\n\n  Propietario -> SIVIA [label = \"Agendar Cita\"];\n  SIVIA -> Propietario [label = \"Solicitar Documentos\"];\n  Propietario -> SIVIA [label = \"Subir Documentación\"];\n  SIVIA -> Propietario [label = \"Confirmar Cita\"];\n  Propietario -> SIVIA [label = \"Entrega vehículo en CDA\"];\n  SIVIA -> SistemaBaseDatos [label = \"Identificar tipología del vehículo\"];\n  SIVIA -> CamarasVision [label = \"Capturar imágenes\"];\n  SIVIA -> MotorIA [label = \"Análisis NTC 5375 (6.1 y 6.4)\"];\n  SIVIA -> DirectorCDA [label = \"Enviar checklist y resultados\"];\n  DirectorCDA -> SIVIA [label = \"Aprobar Resultados\"];\n  SIVIA -> Propietario [label = \"Notificaciones estado de inspección\"];\n}\n```\n\n---\n\n## Diagrama de Secuencia (Mermaid)\n\n```mermaid\nsequenceDiagram\n  actor Propietario as Propietario\n  participant SIVIA as SIVIA\n  participant SistemaBaseDatos as SistemaBaseDatos\n  participant CamarasVision as CamarasVision\n  participant MotorIA as MotorIA\n  participant DirectorCDA as DirectorCDA\n\n  Propietario ->> SIVIA: Agendar Cita\n  SIVIA ->> Propietario: Solicitar Documentos\n  Propietario ->> SIVIA: Subir Documentación\n  SIVIA ->> Propietario: Confirmar Cita\n  Propietario ->> SIVIA: Entrega vehículo en CDA\n  SIVIA ->> SistemaBaseDatos: Identificar tipología del vehículo\n  SIVIA ->> CamarasVision: Capturar imágenes\n  SIVIA ->> MotorIA: Análisis NTC 5375 (6.1 y 6.4)\n  SIVIA ->> DirectorCDA: Enviar checklist y resultados\n  DirectorCDA ->> SIVIA: Aprobar Resultados\n  SIVIA ->> Propietario: Notificar estado de inspección\n```\n\n---\n\n## Mermaid example desde C4 (referencia)\n\n![Diagrama Mermaid](embed:Mermaid)\n\n---\n\n## Consideraciones de calidad y seguridad (resumen)\n\n- **Disponibilidad y resiliencia**: colas de eventos, reintentos, almacenamiento de evidencias con redundancia.  \n- **Seguridad**: autenticación multifactor para roles críticos, cifrado en tránsito/repouso, control de acceso basado en roles.  \n- **Trazabilidad**: bitácoras firmadas, hashes de evidencia, sellos de tiempo confiables.  \n- **Privacidad**: minimización de datos personales y retención acorde a regulación.  \n- **Escalabilidad**: procesamiento paralelo de inspecciones y análisis por lotes en horas pico.  \n\n",
+          "filename" : "index.md",
           "format" : "Markdown",
           "order" : 1,
           "title" : ""
         }, {
-          "content" : "# Otro (también Ignorado)\r\n\r\n## Sub 2\r\n\r\nOtro texto\r\n\r\n## PlantUML code example\r\n\r\n### Modificación cristian valencia\r\n```plantuml\r\nBob->Alice : Hello!\r\n```\r\n\r\n## Ejemplo PlantUML desde C4:\r\n![Diagrama PlantUML de ejemplo](embed:PlantUML)\r\n\r\n## Kroki code example (No despliega el diagrama correctamente):\r\n\r\n```kroki\r\n[Person]\r\n*name\r\nheight\r\nweight\r\n+birth_location_id\r\n\r\n[Location]\r\n*id\r\ncity\r\nstate\r\ncountry\r\n\r\nPerson *--1 Location\r\n```\r\n\r\n## Ejemplo Kroki desde C4:\r\n\r\nEjemplo desde C4:\r\n![Diagrama Kroki de ejemplo](embed:Kroki)",
-          "filename" : "\\otro copy.md",
+          "content" : "# Otro (también Ignorado)\n\n## Sub 2\n\nOtro texto\n\n## PlantUML code example\n\n### Modificación cristian valencia\n```plantuml\nBob->Alice : Hello!\n```\n\n## Ejemplo PlantUML desde C4:\n![Diagrama PlantUML de ejemplo](embed:PlantUML)\n\n## Kroki code example (No despliega el diagrama correctamente):\n\n```kroki\n[Person]\n*name\nheight\nweight\n+birth_location_id\n\n[Location]\n*id\ncity\nstate\ncountry\n\nPerson *--1 Location\n```\n\n## Ejemplo Kroki desde C4:\n\nEjemplo desde C4:\n![Diagrama Kroki de ejemplo](embed:Kroki)",
+          "filename" : "otro copy.md",
           "format" : "Markdown",
           "order" : 2,
           "title" : ""
         }, {
-          "content" : "# Otro (también Ignorado)\r\n\r\n## Sub 2\r\n\r\nOtro texto\r\n\r\n## PlantUML code example\r\n\r\n```plantuml\r\nBob->Alice : Hello!\r\n```\r\n\r\n## Ejemplo PlantUML desde C4:\r\n![Diagrama PlantUML de ejemplo](embed:PlantUML)\r\n\r\n## Kroki code example (No despliega el diagrama correctamente):\r\n\r\n```kroki\r\n[Person]\r\n*name\r\nheight\r\nweight\r\n+birth_location_id\r\n\r\n[Location]\r\n*id\r\ncity\r\nstate\r\ncountry\r\n\r\nPerson *--1 Location\r\n```\r\n\r\n## Ejemplo Kroki desde C4:\r\n\r\nEjemplo desde C4:\r\n![Diagrama Kroki de ejemplo](embed:Kroki)",
-          "filename" : "\\otro.md",
+          "content" : "# Otro (también Ignorado)\n\n## Sub 2\n\nOtro texto\n\n## PlantUML code example\n\n```plantuml\nBob->Alice : Hello!\n```\n\n## Ejemplo PlantUML desde C4:\n![Diagrama PlantUML de ejemplo](embed:PlantUML)\n\n## Kroki code example (No despliega el diagrama correctamente):\n\n```kroki\n[Person]\n*name\nheight\nweight\n+birth_location_id\n\n[Location]\n*id\ncity\nstate\ncountry\n\nPerson *--1 Location\n```\n\n## Ejemplo Kroki desde C4:\n\nEjemplo desde C4:\n![Diagrama Kroki de ejemplo](embed:Kroki)",
+          "filename" : "otro.md",
           "format" : "Markdown",
           "order" : 3,
           "title" : ""
@@ -661,7 +660,7 @@
   },
   "name" : "Automatización Revision Tecnico Mecanica",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlICJBdXRvbWF0aXphY2nDs24gUmV2aXNpb24gVGVjbmljbyBNZWNhbmljYSIgIk1vZGVsbyBkZSBhcnF1aXRlY3R1cmEgQzQgcGFyYSBlbCBzaXN0ZW1hIGRlIGF1dG9tYXRpemFjacOzbiBkZSBsYSBSVE0gZW4gdW4gQ0RBLiIgew0KDQogICAgbW9kZWwgew0KICAgICAgICBwcm9wZXJ0aWVzIHsNCiAgICAgICAgICAgICJzdHJ1Y3R1cml6ci5ncm91cFNlcGFyYXRvciIgIi8iDQogICAgICAgIH0NCg0KICAgICAgICBhY3RvcmVzID0gZ3JvdXAgIkFjdG9yZXMgZGVsIFNpc3RlbWEiIHsNCiAgICAgICAgICAgIHByb3BpZXRhcmlvID0gcGVyc29uICJQcm9waWV0YXJpbyBkZWwgVmVow61jdWxvIiAiRHVlw7FvIGRlbCB2ZWjDrWN1bG8gcXVlIGFnZW5kYSB5IGdlc3Rpb25hIGxhIHJldmlzacOzbi4iDQogICAgICAgICAgICB0ZWNuaWNvID0gcGVyc29uICJUw6ljbmljbyBkZWwgQ0RBIiAiRnVuY2lvbmFyaW8gcXVlIHJlYWxpemEgbGEgcmV2aXNpw7NuIHkgY29uc3VsdGEgcmVzdWx0YWRvcy4iDQogICAgICAgICAgICBkaXJlY3RvciA9IHBlcnNvbiAiRGlyZWN0b3IgQ0RBIiAiVmFsaWRhIGVsIGN1bXBsaW1pZW50byB5IGxhIGVtaXNpw7NuIGRlIGNlcnRpZmljYWRvcy4iDQogICAgICAgIH0NCiAgICAgICAgDQogICAgICAgIHNpc3RlbWEgPSBzb2Z0d2FyZVN5c3RlbSAiU0lWSUEiICJQbGF0YWZvcm1hIGNlbnRyYWwgcGFyYSBlbCBhZ2VuZGFtaWVudG8geSBsYSBpbnNwZWNjacOzbiBhdXRvbWF0aXphZGEuIiB7DQogICAgICAgICAgICAhZG9jcyBkb2NzDQogICAgICAgICAgICAhYWRycyBhZHJzDQoNCiAgICAgICAgICAgIGludGVyZmFjZXMgPSBncm91cCAiSW50ZXJmYWNlcyBkZSBVc3VhcmlvIiB7DQogICAgICAgICAgICAgICAgd2ViYXBwID0gY29udGFpbmVyICJGcm9udGVuZCBXZWIiICJJbnRlcmZheiBkZSB1c3VhcmlvIHBhcmEgYWdlbmRhbWllbnRvLCBwYWdvcyB5IHNlZ3VpbWllbnRvIGVuIHRpZW1wbyByZWFsLiIgIlJlYWN0IiAiQnJvd3NlciIgew0KICAgICAgICAgICAgICAgICAgICBwcm9waWV0YXJpbyAtPiB0aGlzICJVc2EgcGFyYSBhZ2VuZGFyLCBwYWdhciB5IHNlZ3VpciBsYSByZXZpc2nDs24iDQogICAgICAgICAgICAgICAgICAgIHRlY25pY28gLT4gdGhpcyAiQ29uc3VsdGEgaW5mb3JtYWNpw7NuIGRlIGNpdGFzIiAiSFRUUFMiDQogICAgICAgICAgICAgICAgICAgIGRpcmVjdG9yIC0+IHRoaXMgIkNvbnN1bHRhIHJlcG9ydGVzIHkgcmVzdWx0YWRvcyIgIkhUVFBTIg0KICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgQ2xpZW50VmlldyA9IGNvbXBvbmVudCAiVmlzdGEgQ2xpZW50ZSIgIkNvbXBvbmVudGUgZGUgVUkgcGFyYSBnZXN0acOzbiBkZSBjaXRhcywgcGFnb3MgeSBzZWd1aW1pZW50by4iICJSZWFjdCBDb21wb25lbnQiDQogICAgICAgICAgICAgICAgICAgIFRlY2hWaWV3ID0gY29tcG9uZW50ICJWaXN0YSBUw6ljbmljbyIgIkNvbXBvbmVudGUgZGUgVUkgcGFyYSByZXZpc2FyIHZlaMOtY3Vsb3MgYWdlbmRhZG9zIHkgbW9uaXRvcmVhciBpbnNwZWNjacOzbi4iICJSZWFjdCBDb21wb25lbnQiDQogICAgICAgICAgICAgICAgICAgIERpcmVjdG9yVmlldyA9IGNvbXBvbmVudCAiVmlzdGEgRGlyZWN0b3IiICJDb21wb25lbnRlIGRlIFVJIHBhcmEgdmlzdWFsaXphciB5IGFwcm9iYXIgcmVwb3J0ZXMuIiAiUmVhY3QgQ29tcG9uZW50Ig0KICAgICAgICAgICAgICAgICAgICBhcGlDbGllbnQgPSBjb21wb25lbnQgIkNsaWVudGUgQVBJIiAiRW5jYXBzdWxhIGxhIGNvbXVuaWNhY2nDs24gSFRUUCBjb24gZWwgYmFja2VuZC4iICJBeGlvcyINCg0KICAgICAgICAgICAgICAgICAgICBDbGllbnRWaWV3IC0+IGFwaUNsaWVudCAiVXNhIg0KICAgICAgICAgICAgICAgICAgICBUZWNoVmlldyAtPiBhcGlDbGllbnQgIlVzYSINCiAgICAgICAgICAgICAgICAgICAgRGlyZWN0b3JWaWV3IC0+IGFwaUNsaWVudCAiVXNhIg0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIA0KICAgICAgICAgICAgc2VydmljaW9zQmFja2VuZCA9IGdyb3VwICJTZXJ2aWNpb3MgZGUgQmFja2VuZCIgew0KICAgICAgICAgICAgICAgIGd3ID0gY29udGFpbmVyICJBUEkgR2F0ZXdheSIgIlB1bnRvIGRlIGVudHJhZGEgw7puaWNvIHBhcmEgdG9kYXMgbGFzIHNvbGljaXR1ZGVzIGRlbCBjbGllbnRlLiIgIkFtYXpvbiBBUEkgR2F0ZXdheSIgew0KICAgICAgICAgICAgICAgICAgICBhcGlDbGllbnQgLT4gdGhpcyAiUmVhbGl6YSBzb2xpY2l0dWRlcyIgIkhUVFBTIg0KDQogICAgICAgICAgICAgICAgfQ0KDQogICAgICAgICAgICAgICAgYmFsYW5jZWFkb3IgPSBjb250YWluZXIgIkJhbGFuY2VhZG9yIGRlIENhcmdhIiAiRGlzdHJpYnV5ZSBlbCB0csOhZmljbyBlbnRyYW50ZSBlbnRyZSBsYXMgaW5zdGFuY2lhcyBkZSBsYSBBUEkuIiAiQVdTIEVsYXN0aWMgTG9hZCBCYWxhbmNlciIgew0KICAgICAgICAgICAgICAgICAgICBndyAtPiB0aGlzICJFbnJ1dGEgdHLDoWZpY28iDQogICAgICAgICAgICAgICAgfQ0KDQogICAgICAgICAgICAgICAgSUEgPSBjb250YWluZXIgIklBIFByb2Nlc2FtaWVudG8gZGUgaW1hZ2VuZXMiICJJQSBlbnRyZW5hZGEgcGFyYSBsYSBpZGVudGlmaWNhY2nDs24gZGUgZGVmZWN0b3MuIiAiR29vZ2xlIENsb3VkIFZpc2lvbiBBSSAvIFZlcnRleCBBSSIgew0KICAgICAgICAgICAgICAgICAgICBndyAtPiB0aGlzICJFbnJ1dGEgdHLDoWZpY28iDQogICAgICAgICAgICAgICAgfSAgICAgICAgICAgICAgICANCg0KICAgICAgICAgICAgICAgIGFwaSA9IGNvbnRhaW5lciAiQVBJIGRlIE5lZ29jaW8iICJQcm92ZWUgbGEgbMOzZ2ljYSBkZSBuZWdvY2lvLCB2YWxpZGFjaW9uZXMgeSBvcnF1ZXN0YWNpw7NuIGRlIHNlcnZpY2lvcy4iICJOb2RlLmpzICsgRXhwcmVzcyIgew0KICAgICAgICAgICAgICAgICAgICBiYWxhbmNlYWRvciAtPiB0aGlzICJSZWNpYmUgc29saWNpdHVkZXMiDQoNCiAgICAgICAgICAgICAgICAgICAgY2l0YXNDb250cm9sbGVyID0gY29tcG9uZW50ICJDb250cm9sYWRvciBkZSBDaXRhcyIgIkdlc3Rpb25hIGxhcyBvcGVyYWNpb25lcyBkZSBhZ2VuZGFtaWVudG8geSBwYWdvcy4iICJFeHByZXNzIENvbnRyb2xsZXIiDQogICAgICAgICAgICAgICAgICAgIGluc3BlY2Npb25Db250cm9sbGVyID0gY29tcG9uZW50ICJDb250cm9sYWRvciBkZSBJbnNwZWNjacOzbiIgIkdlc3Rpb25hIGVsIGZsdWpvIGRlIGxhIGluc3BlY2Npw7NuIHkgbm90aWZpY2FjaW9uZXMuIiAiRXhwcmVzcyBDb250cm9sbGVyIg0KICAgICAgICAgICAgICAgICAgICB2YWxpZGFjaW9uU2VydmljZSA9IGNvbXBvbmVudCAiU2VydmljaW8gZGUgVmFsaWRhY2nDs24iICJWYWxpZGEgU09BVCB5IG90cm9zIGRvY3VtZW50b3MgY29udHJhIHNpc3RlbWFzIGV4dGVybm9zLiIgIkphdmFTY3JpcHQiDQogICAgICAgICAgICAgICAgICAgIGNvbXVuaWNhY2lvbklBID0gY29tcG9uZW50ICJDbGllbnRlIFNJVklBIiAiU2UgY29tdW5pY2EgY29uIGVsIHNpc3RlbWEgZGUgSUEgcGFyYSBlbnZpYXIgaW3DoWdlbmVzIHkgcmVjaWJpciByZXN1bHRhZG9zLiIgIkF4aW9zIg0KICAgICAgICAgICAgICAgICAgICByZXBvc2l0b3JpbyA9IGNvbXBvbmVudCAiUmVwb3NpdG9yaW8gZGUgRGF0b3MiICJHZXN0aW9uYSBlbCBhY2Nlc28geSBsYSBwZXJzaXN0ZW5jaWEgZGUgZGF0b3MuIiAiU2VxdWVsaXplIg0KDQogICAgICAgICAgICAgICAgICAgIGNpdGFzQ29udHJvbGxlciAtPiB2YWxpZGFjaW9uU2VydmljZSAiVXNhIHBhcmEgdmFsaWRhciBTT0FUIg0KICAgICAgICAgICAgICAgICAgICBjaXRhc0NvbnRyb2xsZXIgLT4gcmVwb3NpdG9yaW8gIlBlcnNpc3RlIGNpdGFzIHkgcGFnb3MiDQogICAgICAgICAgICAgICAgICAgIGluc3BlY2Npb25Db250cm9sbGVyIC0+IGNvbXVuaWNhY2lvbklBICJFbnbDrWEgZGF0b3MgYSBTSVZJQSINCiAgICAgICAgICAgICAgICAgICAgaW5zcGVjY2lvbkNvbnRyb2xsZXIgLT4gcmVwb3NpdG9yaW8gIkd1YXJkYSByZXN1bHRhZG9zIGRlIGluc3BlY2Npw7NuIg0KICAgICAgICAgICAgICAgIH0NCg0KICAgICAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJCYXNlIGRlIERhdG9zIiAiQWxtYWNlbmEgZGF0b3MgZGUgdXN1YXJpb3MsIGNpdGFzLCB2ZWjDrWN1bG9zIHkgcmVzdWx0YWRvcyBkZSBsYSBpbnNwZWNjacOzbi4iICJQb3N0Z3JlU1FMIiAiZGIiIHsNCiAgICAgICAgICAgICAgICAgICAgcmVwb3NpdG9yaW8gLT4gdGhpcyAiTGVlIHkgZXNjcmliZSIgIkpEQkMiDQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgICAgIA0KICAgICAgICBzaXN0ZW1hc0V4dGVybm9zID0gZ3JvdXAgIlNpc3RlbWFzIEV4dGVybm9zIiB7DQogICAgICAgICAgICBlbnRpZGFkZXNSZWd1bGF0b3JpYXMgPSBzb2Z0d2FyZVN5c3RlbSAiRW50aWRhZGVzIFJlZ3VsYXRvcmlhcyIgIlNpc3RlbWFzIGNvbW8gUlVOVCBwYXJhIHZhbGlkYWNpw7NuIGRlIGRvY3VtZW50b3MuIiAiRXhpc3RpbmcgU3lzdGVtIiB7DQogICAgICAgICAgICAgICAgdmFsaWRhY2lvblNlcnZpY2UgLT4gdGhpcyAiQ29uc3VsdGEgdmFsaWRleiBkZSBTT0FUIiAiU09BUC9SRVNUIg0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgQ2FtYXJhU0VUID0gc29mdHdhcmVTeXN0ZW0gIlNldCBkZSBDw6FtYXJhcyIgIlNldCBkZSBDw6FtYXJhcyBwYXJhIGluc3BlY2Npw7NuIHZpc3VhbCIgIkV4aXN0aW5nIFN5c3RlbSIgew0KICAgICAgICAgICAgICAgIHZhbGlkYWNpb25TZXJ2aWNlIC0+IHRoaXMgIkNhcHR1cmFuIGltw6FnZW5lcyBwYXJhIHByb2Nlc2FtaWVudG8iDQogICAgICAgICAgICB9DQogICAgICAgIH0NCg0KICAgICAgICBkZXBsb3ltZW50RW52aXJvbm1lbnQgIlByb2R1Y2Npw7NuIChDbG91ZCBBV1MpIiB7DQogICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQW1hem9uIFdlYiBTZXJ2aWNlcyIgIiIgInVzLWVhc3QtMSIgew0KICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBDbG91ZCINCiAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQW1hem9uIENsb3VkRnJvbnQiICJDRE4gcGFyYSBkaXN0cmlidWlyIGxhIGludGVyZmF6IGRlIHVzdWFyaW8uIiB7DQogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBDbG91ZEZyb250Ig0KICAgICAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSB3ZWJhcHANCiAgICAgICAgICAgICAgICB9DQoNCiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQW1hem9uIEFQSSBHYXRld2F5IiAiU2VydmljaW8gZ2VzdGlvbmFkbyBwYXJhIEFQSXMuIiB7DQogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBBUEkgR2F0ZXdheSINCiAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgZ3cNCiAgICAgICAgICAgICAgICB9DQoNCiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiRWxhc3RpYyBMb2FkIEJhbGFuY2VyIiAiQmFsYW5jZWFkb3IgZGUgY2FyZ2EgZGUgYXBsaWNhY2nDs24uIiB7DQogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBFbGFzdGljIExvYWQgQmFsYW5jaW5nIg0KICAgICAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBiYWxhbmNlYWRvcg0KICAgICAgICAgICAgICAgIH0NCg0KICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJBbWF6b24gRUtTIiAiU2VydmljaW8gZGUgS3ViZXJuZXRlcyBwYXJhIG9ycXVlc3RhciBsb3MgY29udGVuZWRvcmVzIGRlIGxhIEFQSS4iIHsNCiAgICAgICAgICAgICAgICAgICAgdGFncyAiQW1hem9uIFdlYiBTZXJ2aWNlcyAtIEVLUyINCiAgICAgICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIk5vZG8gMSIgIkluc3RhbmNpYSBFQzIiIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIGFwaQ0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJOb2RvIDIiICJJbnN0YW5jaWEgRUMyIiB7DQogICAgICAgICAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSBhcGkNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0NCg0KICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJBbWF6b24gUkRTIiAiU2VydmljaW8gZGUgQmFzZSBkZSBEYXRvcyByZWxhY2lvbmFsIGdlc3Rpb25hZGEuIiB7DQogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBSRFMiDQogICAgICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJJbnN0YW5jaWEgUG9zdGdyZVNRTCIgew0KICAgICAgICAgICAgICAgICAgICAgICAgdGFncyAiQW1hem9uIFdlYiBTZXJ2aWNlcyAtIFJEUyBQb3N0Z3JlU1FMIEluc3RhbmNlIg0KICAgICAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgZGF0YWJhc2UNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIH0NCiAgICANCiAgICB2aWV3cyB7DQogICAgICAgIHByb3BlcnRpZXMgew0KICAgICAgICAgICAgInBsYW50dW1sLnVybCIgImh0dHBzOi8vcGxhbnR1bWwuY29tL3BsYW50dW1sIg0KICAgICAgICB9DQoNCiAgICAgICAgc3lzdGVtQ29udGV4dCBzaXN0ZW1hICJDb250ZXh0byIgIkRpYWdyYW1hIGRlIGNvbnRleHRvIGRlbCBTSVZJQS4iIHsNCiAgICAgICAgICAgIGluY2x1ZGUgKg0KICAgICAgICAgICAgYXV0b0xheW91dCB0Yg0KICAgICAgICB9DQogICAgICAgIGNvbnRhaW5lciBzaXN0ZW1hICJDb250ZW5lZG9yZXMiICJEaWFncmFtYSBkZSBjb250ZW5lZG9yZXMgZGVsIHNpc3RlbWEuIiB7DQogICAgICAgICAgICBpbmNsdWRlICoNCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGINCiAgICAgICAgfQ0KICAgICAgICBjb21wb25lbnQgd2ViYXBwICJDb21wb25lbnRlc0Zyb250ZW5kIiAiQ29tcG9uZW50ZXMgZGUgbGEgYXBsaWNhY2nDs24gd2ViLiIgew0KICAgICAgICAgICAgaW5jbHVkZSAqDQogICAgICAgICAgICBhdXRvTGF5b3V0IHRiDQogICAgICAgIH0NCiAgICAgICAgY29tcG9uZW50IGFwaSAiQ29tcG9uZW50ZXNCYWNrZW5kIiAiQ29tcG9uZW50ZXMgZGUgbGEgQVBJIGRlIE5lZ29jaW8uIiB7DQogICAgICAgICAgICBpbmNsdWRlICoNCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGINCiAgICAgICAgfQ0KDQogICAgICAgIGRlcGxveW1lbnQgc2lzdGVtYSAiUHJvZHVjY2nDs24gKENsb3VkIEFXUykiICJEZXNwbGllZ3VlQ2xvdWQiICJEZXNjcmliZSBsYSBpbmZyYWVzdHJ1Y3R1cmEgZGUgZGVzcGxpZWd1ZSBlbiBwcm9kdWNjacOzbiBzb2JyZSBBV1MuInsNCiAgICAgICAgICAgIGluY2x1ZGUgKg0KICAgICAgICAgICAgYXV0b0xheW91dCBscg0KICAgICAgICB9DQoNCiAgICAgICAgDQogICAgICAgIGltYWdlIGFwaSAiU2VjdWVuY2lhQWdlbmRhbWllbnRvIiB7DQogICAgICAgICAgICBwbGFudHVtbCAic2VxLnBsYW50Ig0KICAgICAgICAgICAgdGl0bGUgIkRpYWdyYW1hIGRlIFNlY3VlbmNpYSAtIEFnZW5kYW1pZW50byAoUGxhY2Vob2xkZXIpIg0KICAgICAgICB9DQogICAgICAgIA0KICAgICAgICB0aGVtZXMgaHR0cHM6Ly9zdGF0aWMuc3RydWN0dXJpenIuY29tL3RoZW1lcy9hbWF6b24td2ViLXNlcnZpY2VzLTIwMjMuMDEuMzEvdGhlbWUuanNvbg0KDQogICAgICAgIHN0eWxlcyB7DQogICAgICAgICAgICBlbGVtZW50ICJDb21wb25lbnQiIHsNCiAgICAgICAgICAgICAgICBzaGFwZSBDb21wb25lbnQNCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGVsZW1lbnQgImRiIiB7DQogICAgICAgICAgICAgICAgc2hhcGUgQ3lsaW5kZXINCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGVsZW1lbnQgIkJyb3dzZXIiIHsNCiAgICAgICAgICAgICAgICBzaGFwZSBXZWJCcm93c2VyDQogICAgICAgICAgICB9DQogICAgICAgICAgICBlbGVtZW50ICJFeGlzdGluZyBTeXN0ZW0iIHsNCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkNCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmDQogICAgICAgICAgICB9DQogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsNCiAgICAgICAgICAgICAgICBzaGFwZSBQZXJzb24NCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICNmNGQwM2YNCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIH0NCn0="
+    "structurizr.dsl" : "d29ya3NwYWNlICJBdXRvbWF0aXphY2nDs24gUmV2aXNpb24gVGVjbmljbyBNZWNhbmljYSIgIk1vZGVsbyBkZSBhcnF1aXRlY3R1cmEgQzQgcGFyYSBlbCBzaXN0ZW1hIGRlIGF1dG9tYXRpemFjacOzbiBkZSBsYSBSVE0gZW4gdW4gQ0RBLiIgewoKICAgIG1vZGVsIHsKICAgICAgICBwcm9wZXJ0aWVzIHsKICAgICAgICAgICAgInN0cnVjdHVyaXpyLmdyb3VwU2VwYXJhdG9yIiAiLyIKICAgICAgICB9CgogICAgICAgIGFjdG9yZXMgPSBncm91cCAiQWN0b3JlcyBkZWwgU2lzdGVtYSIgewogICAgICAgICAgICBwcm9waWV0YXJpbyA9IHBlcnNvbiAiUHJvcGlldGFyaW8gZGVsIFZlaMOtY3VsbyIgIkR1ZcOxbyBkZWwgdmVow61jdWxvIHF1ZSBhZ2VuZGEgeSBnZXN0aW9uYSBsYSByZXZpc2nDs24uIgogICAgICAgICAgICB0ZWNuaWNvID0gcGVyc29uICJUw6ljbmljbyBkZWwgQ0RBIiAiRnVuY2lvbmFyaW8gcXVlIHJlYWxpemEgbGEgcmV2aXNpw7NuIHkgY29uc3VsdGEgcmVzdWx0YWRvcy4iCiAgICAgICAgICAgIGRpcmVjdG9yID0gcGVyc29uICJEaXJlY3RvciBDREEiICJWYWxpZGEgZWwgY3VtcGxpbWllbnRvIHkgbGEgZW1pc2nDs24gZGUgY2VydGlmaWNhZG9zLiIKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgc2lzdGVtYSA9IHNvZnR3YXJlU3lzdGVtICJTSVZJQSIgIlBsYXRhZm9ybWEgY2VudHJhbCBwYXJhIGVsIGFnZW5kYW1pZW50byB5IGxhIGluc3BlY2Npw7NuIGF1dG9tYXRpemFkYS4iIHsKICAgICAgICAgICAgIWRvY3MgZG9jcwogICAgICAgICAgICAhYWRycyBhZHJzCgogICAgICAgICAgICBpbnRlcmZhY2VzID0gZ3JvdXAgIkludGVyZmFjZXMgZGUgVXN1YXJpbyIgewogICAgICAgICAgICAgICAgd2ViYXBwID0gY29udGFpbmVyICJGcm9udGVuZCBXZWIiICJJbnRlcmZheiBkZSB1c3VhcmlvIHBhcmEgYWdlbmRhbWllbnRvLCBwYWdvcyB5IHNlZ3VpbWllbnRvIGVuIHRpZW1wbyByZWFsLiIgIlJlYWN0IiAiQnJvd3NlciIgewogICAgICAgICAgICAgICAgICAgIHByb3BpZXRhcmlvIC0+IHRoaXMgIlVzYSBwYXJhIGFnZW5kYXIsIHBhZ2FyIHkgc2VndWlyIGxhIHJldmlzacOzbiIKICAgICAgICAgICAgICAgICAgICB0ZWNuaWNvIC0+IHRoaXMgIkNvbnN1bHRhIGluZm9ybWFjacOzbiBkZSBjaXRhcyIgIkhUVFBTIgogICAgICAgICAgICAgICAgICAgIGRpcmVjdG9yIC0+IHRoaXMgIkNvbnN1bHRhIHJlcG9ydGVzIHkgcmVzdWx0YWRvcyIgIkhUVFBTIgogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgIENsaWVudFZpZXcgPSBjb21wb25lbnQgIlZpc3RhIENsaWVudGUiICJDb21wb25lbnRlIGRlIFVJIHBhcmEgZ2VzdGnDs24gZGUgY2l0YXMsIHBhZ29zIHkgc2VndWltaWVudG8uIiAiUmVhY3QgQ29tcG9uZW50IgogICAgICAgICAgICAgICAgICAgIFRlY2hWaWV3ID0gY29tcG9uZW50ICJWaXN0YSBUw6ljbmljbyIgIkNvbXBvbmVudGUgZGUgVUkgcGFyYSByZXZpc2FyIHZlaMOtY3Vsb3MgYWdlbmRhZG9zIHkgbW9uaXRvcmVhciBpbnNwZWNjacOzbi4iICJSZWFjdCBDb21wb25lbnQiCiAgICAgICAgICAgICAgICAgICAgRGlyZWN0b3JWaWV3ID0gY29tcG9uZW50ICJWaXN0YSBEaXJlY3RvciIgIkNvbXBvbmVudGUgZGUgVUkgcGFyYSB2aXN1YWxpemFyIHkgYXByb2JhciByZXBvcnRlcy4iICJSZWFjdCBDb21wb25lbnQiCiAgICAgICAgICAgICAgICAgICAgYXBpQ2xpZW50ID0gY29tcG9uZW50ICJDbGllbnRlIEFQSSIgIkVuY2Fwc3VsYSBsYSBjb211bmljYWNpw7NuIEhUVFAgY29uIGVsIGJhY2tlbmQuIiAiQXhpb3MiCgogICAgICAgICAgICAgICAgICAgIENsaWVudFZpZXcgLT4gYXBpQ2xpZW50ICJVc2EiCiAgICAgICAgICAgICAgICAgICAgVGVjaFZpZXcgLT4gYXBpQ2xpZW50ICJVc2EiCiAgICAgICAgICAgICAgICAgICAgRGlyZWN0b3JWaWV3IC0+IGFwaUNsaWVudCAiVXNhIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBzZXJ2aWNpb3NCYWNrZW5kID0gZ3JvdXAgIlNlcnZpY2lvcyBkZSBCYWNrZW5kIiB7CiAgICAgICAgICAgICAgICBndyA9IGNvbnRhaW5lciAiQVBJIEdhdGV3YXkiICJQdW50byBkZSBlbnRyYWRhIMO6bmljbyBwYXJhIHRvZGFzIGxhcyBzb2xpY2l0dWRlcyBkZWwgY2xpZW50ZS4iICJBbWF6b24gQVBJIEdhdGV3YXkiIHsKICAgICAgICAgICAgICAgICAgICBhcGlDbGllbnQgLT4gdGhpcyAiUmVhbGl6YSBzb2xpY2l0dWRlcyIgIkhUVFBTIgoKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBiYWxhbmNlYWRvciA9IGNvbnRhaW5lciAiQmFsYW5jZWFkb3IgZGUgQ2FyZ2EiICJEaXN0cmlidXllIGVsIHRyw6FmaWNvIGVudHJhbnRlIGVudHJlIGxhcyBpbnN0YW5jaWFzIGRlIGxhIEFQSS4iICJBV1MgRWxhc3RpYyBMb2FkIEJhbGFuY2VyIiB7CiAgICAgICAgICAgICAgICAgICAgZ3cgLT4gdGhpcyAiRW5ydXRhIHRyw6FmaWNvIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIElBID0gY29udGFpbmVyICJJQSBQcm9jZXNhbWllbnRvIGRlIGltYWdlbmVzIiAiSUEgZW50cmVuYWRhIHBhcmEgbGEgaWRlbnRpZmljYWNpw7NuIGRlIGRlZmVjdG9zLiIgIkdvb2dsZSBDbG91ZCBWaXNpb24gQUkgLyBWZXJ0ZXggQUkiIHsKICAgICAgICAgICAgICAgICAgICBndyAtPiB0aGlzICJFbnJ1dGEgdHLDoWZpY28iCiAgICAgICAgICAgICAgICB9ICAgICAgICAgICAgICAgIAoKICAgICAgICAgICAgICAgIGFwaSA9IGNvbnRhaW5lciAiQVBJIGRlIE5lZ29jaW8iICJQcm92ZWUgbGEgbMOzZ2ljYSBkZSBuZWdvY2lvLCB2YWxpZGFjaW9uZXMgeSBvcnF1ZXN0YWNpw7NuIGRlIHNlcnZpY2lvcy4iICJOb2RlLmpzICsgRXhwcmVzcyIgewogICAgICAgICAgICAgICAgICAgIGJhbGFuY2VhZG9yIC0+IHRoaXMgIlJlY2liZSBzb2xpY2l0dWRlcyIKCiAgICAgICAgICAgICAgICAgICAgY2l0YXNDb250cm9sbGVyID0gY29tcG9uZW50ICJDb250cm9sYWRvciBkZSBDaXRhcyIgIkdlc3Rpb25hIGxhcyBvcGVyYWNpb25lcyBkZSBhZ2VuZGFtaWVudG8geSBwYWdvcy4iICJFeHByZXNzIENvbnRyb2xsZXIiCiAgICAgICAgICAgICAgICAgICAgaW5zcGVjY2lvbkNvbnRyb2xsZXIgPSBjb21wb25lbnQgIkNvbnRyb2xhZG9yIGRlIEluc3BlY2Npw7NuIiAiR2VzdGlvbmEgZWwgZmx1am8gZGUgbGEgaW5zcGVjY2nDs24geSBub3RpZmljYWNpb25lcy4iICJFeHByZXNzIENvbnRyb2xsZXIiCiAgICAgICAgICAgICAgICAgICAgdmFsaWRhY2lvblNlcnZpY2UgPSBjb21wb25lbnQgIlNlcnZpY2lvIGRlIFZhbGlkYWNpw7NuIiAiVmFsaWRhIFNPQVQgeSBvdHJvcyBkb2N1bWVudG9zIGNvbnRyYSBzaXN0ZW1hcyBleHRlcm5vcy4iICJKYXZhU2NyaXB0IgogICAgICAgICAgICAgICAgICAgIGNvbXVuaWNhY2lvbklBID0gY29tcG9uZW50ICJDbGllbnRlIFNJVklBIiAiU2UgY29tdW5pY2EgY29uIGVsIHNpc3RlbWEgZGUgSUEgcGFyYSBlbnZpYXIgaW3DoWdlbmVzIHkgcmVjaWJpciByZXN1bHRhZG9zLiIgIkF4aW9zIgogICAgICAgICAgICAgICAgICAgIHJlcG9zaXRvcmlvID0gY29tcG9uZW50ICJSZXBvc2l0b3JpbyBkZSBEYXRvcyIgIkdlc3Rpb25hIGVsIGFjY2VzbyB5IGxhIHBlcnNpc3RlbmNpYSBkZSBkYXRvcy4iICJTZXF1ZWxpemUiCgogICAgICAgICAgICAgICAgICAgIGNpdGFzQ29udHJvbGxlciAtPiB2YWxpZGFjaW9uU2VydmljZSAiVXNhIHBhcmEgdmFsaWRhciBTT0FUIgogICAgICAgICAgICAgICAgICAgIGNpdGFzQ29udHJvbGxlciAtPiByZXBvc2l0b3JpbyAiUGVyc2lzdGUgY2l0YXMgeSBwYWdvcyIKICAgICAgICAgICAgICAgICAgICBpbnNwZWNjaW9uQ29udHJvbGxlciAtPiBjb211bmljYWNpb25JQSAiRW52w61hIGRhdG9zIGEgU0lWSUEiCiAgICAgICAgICAgICAgICAgICAgaW5zcGVjY2lvbkNvbnRyb2xsZXIgLT4gcmVwb3NpdG9yaW8gIkd1YXJkYSByZXN1bHRhZG9zIGRlIGluc3BlY2Npw7NuIgogICAgICAgICAgICAgICAgfQoKICAgICAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJCYXNlIGRlIERhdG9zIiAiQWxtYWNlbmEgZGF0b3MgZGUgdXN1YXJpb3MsIGNpdGFzLCB2ZWjDrWN1bG9zIHkgcmVzdWx0YWRvcyBkZSBsYSBpbnNwZWNjacOzbi4iICJQb3N0Z3JlU1FMIiAiZGIiIHsKICAgICAgICAgICAgICAgICAgICByZXBvc2l0b3JpbyAtPiB0aGlzICJMZWUgeSBlc2NyaWJlIiAiSkRCQyIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICAKICAgICAgICBzaXN0ZW1hc0V4dGVybm9zID0gZ3JvdXAgIlNpc3RlbWFzIEV4dGVybm9zIiB7CiAgICAgICAgICAgIGVudGlkYWRlc1JlZ3VsYXRvcmlhcyA9IHNvZnR3YXJlU3lzdGVtICJFbnRpZGFkZXMgUmVndWxhdG9yaWFzIiAiU2lzdGVtYXMgY29tbyBSVU5UIHBhcmEgdmFsaWRhY2nDs24gZGUgZG9jdW1lbnRvcy4iICJFeGlzdGluZyBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIHZhbGlkYWNpb25TZXJ2aWNlIC0+IHRoaXMgIkNvbnN1bHRhIHZhbGlkZXogZGUgU09BVCIgIlNPQVAvUkVTVCIKICAgICAgICAgICAgfQogICAgICAgICAgICBDYW1hcmFTRVQgPSBzb2Z0d2FyZVN5c3RlbSAiU2V0IGRlIEPDoW1hcmFzIiAiU2V0IGRlIEPDoW1hcmFzIHBhcmEgaW5zcGVjY2nDs24gdmlzdWFsIiAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICB2YWxpZGFjaW9uU2VydmljZSAtPiB0aGlzICJDYXB0dXJhbiBpbcOhZ2VuZXMgcGFyYSBwcm9jZXNhbWllbnRvIgogICAgICAgICAgICB9CiAgICAgICAgfQoKICAgICAgICBkZXBsb3ltZW50RW52aXJvbm1lbnQgIlByb2R1Y2Npw7NuIChDbG91ZCBBV1MpIiB7CiAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJBbWF6b24gV2ViIFNlcnZpY2VzIiAiIiAidXMtZWFzdC0xIiB7CiAgICAgICAgICAgICAgICB0YWdzICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gQ2xvdWQiCiAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJBbWF6b24gQ2xvdWRGcm9udCIgIkNETiBwYXJhIGRpc3RyaWJ1aXIgbGEgaW50ZXJmYXogZGUgdXN1YXJpby4iIHsKICAgICAgICAgICAgICAgICAgICB0YWdzICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gQ2xvdWRGcm9udCIKICAgICAgICAgICAgICAgICAgICBjb250YWluZXJJbnN0YW5jZSB3ZWJhcHAKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQW1hem9uIEFQSSBHYXRld2F5IiAiU2VydmljaW8gZ2VzdGlvbmFkbyBwYXJhIEFQSXMuIiB7CiAgICAgICAgICAgICAgICAgICAgdGFncyAiQW1hem9uIFdlYiBTZXJ2aWNlcyAtIEFQSSBHYXRld2F5IgogICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIGd3CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkVsYXN0aWMgTG9hZCBCYWxhbmNlciIgIkJhbGFuY2VhZG9yIGRlIGNhcmdhIGRlIGFwbGljYWNpw7NuLiIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBFbGFzdGljIExvYWQgQmFsYW5jaW5nIgogICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIGJhbGFuY2VhZG9yCiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkFtYXpvbiBFS1MiICJTZXJ2aWNpbyBkZSBLdWJlcm5ldGVzIHBhcmEgb3JxdWVzdGFyIGxvcyBjb250ZW5lZG9yZXMgZGUgbGEgQVBJLiIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBFS1MiCiAgICAgICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIk5vZG8gMSIgIkluc3RhbmNpYSBFQzIiIHsKICAgICAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgYXBpCiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIGRlcGxveW1lbnROb2RlICJOb2RvIDIiICJJbnN0YW5jaWEgRUMyIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRhaW5lckluc3RhbmNlIGFwaQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBkZXBsb3ltZW50Tm9kZSAiQW1hem9uIFJEUyIgIlNlcnZpY2lvIGRlIEJhc2UgZGUgRGF0b3MgcmVsYWNpb25hbCBnZXN0aW9uYWRhLiIgewogICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBSRFMiCiAgICAgICAgICAgICAgICAgICAgZGVwbG95bWVudE5vZGUgIkluc3RhbmNpYSBQb3N0Z3JlU1FMIiB7CiAgICAgICAgICAgICAgICAgICAgICAgIHRhZ3MgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBSRFMgUG9zdGdyZVNRTCBJbnN0YW5jZSIKICAgICAgICAgICAgICAgICAgICAgICAgY29udGFpbmVySW5zdGFuY2UgZGF0YWJhc2UKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CiAgICAKICAgIHZpZXdzIHsKICAgICAgICBwcm9wZXJ0aWVzIHsKICAgICAgICAgICAgInBsYW50dW1sLnVybCIgImh0dHBzOi8vcGxhbnR1bWwuY29tL3BsYW50dW1sIgogICAgICAgIH0KCiAgICAgICAgc3lzdGVtQ29udGV4dCBzaXN0ZW1hICJDb250ZXh0byIgIkRpYWdyYW1hIGRlIGNvbnRleHRvIGRlbCBTSVZJQS4iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CiAgICAgICAgY29udGFpbmVyIHNpc3RlbWEgIkNvbnRlbmVkb3JlcyIgIkRpYWdyYW1hIGRlIGNvbnRlbmVkb3JlcyBkZWwgc2lzdGVtYS4iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CiAgICAgICAgY29tcG9uZW50IHdlYmFwcCAiQ29tcG9uZW50ZXNGcm9udGVuZCIgIkNvbXBvbmVudGVzIGRlIGxhIGFwbGljYWNpw7NuIHdlYi4iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9MYXlvdXQgdGIKICAgICAgICB9CiAgICAgICAgY29tcG9uZW50IGFwaSAiQ29tcG9uZW50ZXNCYWNrZW5kIiAiQ29tcG9uZW50ZXMgZGUgbGEgQVBJIGRlIE5lZ29jaW8uIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IHRiCiAgICAgICAgfQoKICAgICAgICBkZXBsb3ltZW50IHNpc3RlbWEgIlByb2R1Y2Npw7NuIChDbG91ZCBBV1MpIiAiRGVzcGxpZWd1ZUNsb3VkIiAiRGVzY3JpYmUgbGEgaW5mcmFlc3RydWN0dXJhIGRlIGRlc3BsaWVndWUgZW4gcHJvZHVjY2nDs24gc29icmUgQVdTLiJ7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvTGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICAKICAgICAgICBpbWFnZSBhcGkgIlNlY3VlbmNpYUFnZW5kYW1pZW50byIgewogICAgICAgICAgICBwbGFudHVtbCAic2VxLnBsYW50IgogICAgICAgICAgICB0aXRsZSAiRGlhZ3JhbWEgZGUgU2VjdWVuY2lhIC0gQWdlbmRhbWllbnRvIChQbGFjZWhvbGRlcikiCiAgICAgICAgfQogICAgICAgIAogICAgICAgIHRoZW1lcyBodHRwczovL3N0YXRpYy5zdHJ1Y3R1cml6ci5jb20vdGhlbWVzL2FtYXpvbi13ZWItc2VydmljZXMtMjAyMy4wMS4zMS90aGVtZS5qc29uCgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgc2hhcGUgQ29tcG9uZW50CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiZGIiIHsKICAgICAgICAgICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQnJvd3NlciIgewogICAgICAgICAgICAgICAgc2hhcGUgV2ViQnJvd3NlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkV4aXN0aW5nIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBQZXJzb24KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgI2Y0ZDAzZgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQp9"
   },
   "views" : {
     "componentViews" : [ {
@@ -676,30 +675,26 @@
       },
       "containerId" : "5",
       "description" : "Componentes de la aplicación web.",
-      "dimensions" : {
-        "height" : 2070,
-        "width" : 2390
-      },
       "elements" : [ {
         "id" : "12",
-        "x" : 220,
-        "y" : 172
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "13",
-        "x" : 970,
-        "y" : 172
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "14",
-        "x" : 1720,
-        "y" : 172
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "15",
-        "x" : 970,
-        "y" : 772
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "19",
-        "x" : 970,
-        "y" : 1522
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "ComponentesFrontend",
@@ -725,42 +720,38 @@
       },
       "containerId" : "26",
       "description" : "Componentes de la API de Negocio.",
-      "dimensions" : {
-        "height" : 2070,
-        "width" : 2755
-      },
       "elements" : [ {
         "id" : "28",
-        "x" : 959,
-        "y" : 171
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "29",
-        "x" : 1709,
-        "y" : 171
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "30",
-        "x" : 574,
-        "y" : 771
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "31",
-        "x" : 1324,
-        "y" : 771
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "32",
-        "x" : 2084,
-        "y" : 771
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "37",
-        "x" : 2084,
-        "y" : 1521
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "40",
-        "x" : 199,
-        "y" : 1521
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "44",
-        "x" : 949,
-        "y" : 1521
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "ComponentesBackend",
@@ -783,8 +774,7 @@
     } ],
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "ComponentesFrontend",
-      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "Contexto",
       "properties" : {
         "plantuml.url" : "https://plantuml.com/plantuml"
       },
@@ -984,7 +974,7 @@
       "softwareSystemId" : "4"
     } ],
     "imageViews" : [ {
-      "content" : "https://plantuml.com/plantuml/svg/TSv12e0W48NXlU0TvW9U82Aq8tG3iu446ql7-oT9gtBzFdwUpcmJboD8OO9t26g2EQu3cC8x4djdsKU21Q-2cQMe8wYA7lt3yXafenIV7iKg4zXEj-bHgSPjZxzzZRJLspS0",
+      "content" : "https://plantuml.com/plantuml/svg/TSx13O0W38NXErDqWIvWZ057S0F49f9WKIZxIyIJmVFxykVfB3P9EO8omJi2d62Ewm2co4uitbdnaM6Xgr0MLJV0QXxSKVcCd4bzOnohIs3xqOP7nARjdtxZcdYhXsy0",
       "contentType" : "image/svg+xml",
       "elementId" : "26",
       "key" : "SecuenciaAgendamiento",
