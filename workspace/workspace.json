@@ -1,261 +1,99 @@
 {
-  "configuration" : { },
+  "configuration" : {
+    "scope" : "SoftwareSystem"
+  },
   "description" : "Description",
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2025-08-02T19:54:06Z",
+  "lastModifiedDate" : "2025-08-23T18:41:47Z",
   "model" : {
     "people" : [ {
-      "description" : "Dueño del vehículo que agenda la cita",
       "id" : "1",
       "location" : "Unspecified",
-      "name" : "Propietario del Vehículo",
+      "name" : "User",
       "properties" : {
-        "structurizr.dsl.identifier" : "propietario"
+        "structurizr.dsl.identifier" : "u"
       },
       "relationships" : [ {
-        "description" : "Accede para agendar citas y subir documentos",
-        "destinationId" : "3",
-        "id" : "4",
-        "sourceId" : "1",
-        "tags" : "Relationship"
-      }, {
-        "description" : "Utiliza desde navegador",
-        "destinationId" : "7",
-        "id" : "14",
-        "sourceId" : "1",
-        "tags" : "Relationship"
-      } ],
-      "tags" : "Element,Person,Propietario"
-    }, {
-      "description" : "Funcionario que realiza la revisión técnica",
-      "id" : "2",
-      "location" : "Unspecified",
-      "name" : "Técnico del CDA",
-      "properties" : {
-        "structurizr.dsl.identifier" : "tecnico"
-      },
-      "relationships" : [ {
-        "description" : "Revisa información y resultados",
+        "description" : "Uses",
         "destinationId" : "3",
         "id" : "5",
-        "sourceId" : "2",
+        "sourceId" : "1",
         "tags" : "Relationship"
       }, {
-        "description" : "Consulta información de citas",
-        "destinationId" : "6",
-        "id" : "20",
-        "sourceId" : "2",
-        "tags" : "Relationship"
+        "description" : "Uses",
+        "destinationId" : "2",
+        "id" : "6",
+        "linkedRelationshipId" : "5",
+        "sourceId" : "1"
       } ],
-      "tags" : "Element,Person,Tecnico"
+      "tags" : "Element,Person"
     } ],
     "softwareSystems" : [ {
       "containers" : [ {
-        "description" : "Punto de entrada de todas las solicitudes Web",
         "documentation" : { },
-        "id" : "6",
-        "name" : "Api Gateway",
+        "id" : "3",
+        "name" : "Web Application",
         "properties" : {
-          "structurizr.dsl.identifier" : "gw"
+          "structurizr.dsl.identifier" : "ss.wa"
         },
         "relationships" : [ {
-          "description" : "Balancea la carga de solicitudes",
-          "destinationId" : "8",
-          "id" : "16",
-          "sourceId" : "6",
+          "description" : "Reads from and writes to",
+          "destinationId" : "4",
+          "id" : "7",
+          "sourceId" : "3",
           "tags" : "Relationship"
         } ],
-        "tags" : "Element,Container,Amazon Web Services - API Gateway",
-        "technology" : "Aws Gw"
+        "tags" : "Element,Container"
       }, {
-        "description" : "Interfaz de usuario para agendamiento y seguimiento",
         "documentation" : { },
-        "id" : "7",
-        "name" : "Frontend Web",
+        "id" : "4",
+        "name" : "Database Schema",
         "properties" : {
-          "structurizr.dsl.identifier" : "webapp"
+          "structurizr.dsl.identifier" : "ss.db"
         },
-        "relationships" : [ {
-          "description" : "Enruta Solicitudes",
-          "destinationId" : "6",
-          "id" : "15",
-          "sourceId" : "7",
-          "tags" : "Relationship"
-        } ],
-        "tags" : "Element,Container,Amazon Web Services - CloudFront",
-        "technology" : "React"
-      }, {
-        "description" : "Balancea la carga de solicitudes en los diferentes endpoints",
-        "documentation" : { },
-        "id" : "8",
-        "name" : "Balanceador de Carga",
-        "properties" : {
-          "structurizr.dsl.identifier" : "balanceador"
-        },
-        "relationships" : [ {
-          "description" : "Balancea la carga de solicitudes",
-          "destinationId" : "9",
-          "id" : "17",
-          "sourceId" : "8",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Balancea la carga de solicitudes",
-          "destinationId" : "10",
-          "id" : "18",
-          "sourceId" : "8",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Balancea la carga de solicitudes",
-          "destinationId" : "11",
-          "id" : "19",
-          "sourceId" : "8",
-          "tags" : "Relationship"
-        } ],
-        "tags" : "Element,Container,Amazon Web Services - Elastic Load Balancing",
-        "technology" : "Aws Load Balancer"
-      }, {
-        "description" : "Lógica de negocio, validación y conexión con IA",
-        "documentation" : { },
-        "id" : "9",
-        "name" : "API Backend 1",
-        "properties" : {
-          "structurizr.dsl.identifier" : "api1"
-        },
-        "relationships" : [ {
-          "description" : "Lee y guarda datos",
-          "destinationId" : "12",
-          "id" : "21",
-          "sourceId" : "9",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Envía imágenes para validación",
-          "destinationId" : "13",
-          "id" : "22",
-          "sourceId" : "9",
-          "tags" : "Relationship"
-        } ],
-        "tags" : "Element,Container,Amazon Web Services - EKS Cloud",
-        "technology" : "Node.js + Express"
-      }, {
-        "description" : "Lógica de negocio, validación y conexión con IA",
-        "documentation" : { },
-        "id" : "10",
-        "name" : "API Backend 2",
-        "properties" : {
-          "structurizr.dsl.identifier" : "api2"
-        },
-        "relationships" : [ {
-          "description" : "Lee y guarda datos",
-          "destinationId" : "12",
-          "id" : "23",
-          "sourceId" : "10",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Envía imágenes para validación",
-          "destinationId" : "13",
-          "id" : "24",
-          "sourceId" : "10",
-          "tags" : "Relationship"
-        } ],
-        "tags" : "Element,Container,Amazon Web Services - EKS Cloud",
-        "technology" : "Node.js + Express"
-      }, {
-        "description" : "Lógica de negocio, validación y conexión con IA",
-        "documentation" : { },
-        "id" : "11",
-        "name" : "API Backend 3",
-        "properties" : {
-          "structurizr.dsl.identifier" : "api3"
-        },
-        "relationships" : [ {
-          "description" : "Lee y guarda datos",
-          "destinationId" : "12",
-          "id" : "25",
-          "sourceId" : "11",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Envía imágenes para validación",
-          "destinationId" : "13",
-          "id" : "26",
-          "sourceId" : "11",
-          "tags" : "Relationship"
-        } ],
-        "tags" : "Element,Container,Amazon Web Services - EKS Cloud",
-        "technology" : "Node.js + Express"
-      }, {
-        "description" : "Guarda citas, usuarios, documentos",
-        "documentation" : { },
-        "id" : "12",
-        "name" : "Base de Datos",
-        "properties" : {
-          "structurizr.dsl.identifier" : "db"
-        },
-        "tags" : "Element,Container,BD",
-        "technology" : "PostgreSQL"
-      }, {
-        "description" : "Servicio de IA para validar fotos/documentos",
-        "documentation" : { },
-        "id" : "13",
-        "name" : "SIVIA - Sistema de Inspección Visual Automatizado por IA",
-        "properties" : {
-          "structurizr.dsl.identifier" : "ia"
-        },
-        "tags" : "Element,Container",
-        "technology" : "API externa (Python)"
+        "tags" : "Element,Container,Database"
       } ],
       "documentation" : { },
-      "id" : "3",
+      "id" : "2",
       "location" : "Unspecified",
-      "name" : "Sistema de Agendamiento RTM",
+      "name" : "Software System",
       "properties" : {
-        "structurizr.dsl.identifier" : "sistema"
+        "structurizr.dsl.identifier" : "ss"
       },
       "tags" : "Element,Software System"
     } ]
   },
-  "name" : "Automatizacion CDA",
+  "name" : "Name",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlICJBdXRvbWF0aXphY2lvbiBDREEiIHsKCgogIG1vZGVsIHsKICAgIHByb3BpZXRhcmlvID0gcGVyc29uICJQcm9waWV0YXJpbyBkZWwgVmVow61jdWxvIiAiRHVlw7FvIGRlbCB2ZWjDrWN1bG8gcXVlIGFnZW5kYSBsYSBjaXRhIiB7CiAgICAgIHRhZ3MgIlByb3BpZXRhcmlvIgogICAgfQogICAgdGVjbmljbyA9IHBlcnNvbiAiVMOpY25pY28gZGVsIENEQSIgIkZ1bmNpb25hcmlvIHF1ZSByZWFsaXphIGxhIHJldmlzacOzbiB0w6ljbmljYSIgewogICAgICB0YWdzICJUZWNuaWNvIgogICAgfQoKICAgIHNpc3RlbWEgPSBzb2Z0d2FyZVN5c3RlbSAiU2lzdGVtYSBkZSBBZ2VuZGFtaWVudG8gUlRNIiB7CiAgICAgIHByb3BpZXRhcmlvIC0+IHRoaXMgIkFjY2VkZSBwYXJhIGFnZW5kYXIgY2l0YXMgeSBzdWJpciBkb2N1bWVudG9zIgogICAgICB0ZWNuaWNvIC0+IHRoaXMgIlJldmlzYSBpbmZvcm1hY2nDs24geSByZXN1bHRhZG9zIgogICAgICAKICAgICAgZ3cgPSBjb250YWluZXIgIkFwaSBHYXRld2F5IiAiUHVudG8gZGUgZW50cmFkYSBkZSB0b2RhcyBsYXMgc29saWNpdHVkZXMgV2ViIiAiQXdzIEd3IiB7CiAgICAgICAgICB0YWcgIkFtYXpvbiBXZWIgU2VydmljZXMgLSBBUEkgR2F0ZXdheSIKICAgICAgfQoKICAgICAgd2ViYXBwID0gY29udGFpbmVyICJGcm9udGVuZCBXZWIiICJJbnRlcmZheiBkZSB1c3VhcmlvIHBhcmEgYWdlbmRhbWllbnRvIHkgc2VndWltaWVudG8iICJSZWFjdCIgewogICAgICAgICAgdGFnICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gQ2xvdWRGcm9udCIKICAgICAgfQogICAgICBiYWxhbmNlYWRvciA9IGNvbnRhaW5lciAiQmFsYW5jZWFkb3IgZGUgQ2FyZ2EiICJCYWxhbmNlYSBsYSBjYXJnYSBkZSBzb2xpY2l0dWRlcyBlbiBsb3MgZGlmZXJlbnRlcyBlbmRwb2ludHMiICJBd3MgTG9hZCBCYWxhbmNlciIgewogICAgICAgICAgdGFnICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gRWxhc3RpYyBMb2FkIEJhbGFuY2luZwkiCiAgICAgIH0KICAgICAgYXBpMSA9IGNvbnRhaW5lciAiQVBJIEJhY2tlbmQgMSIgIkzDs2dpY2EgZGUgbmVnb2NpbywgdmFsaWRhY2nDs24geSBjb25leGnDs24gY29uIElBIiAiTm9kZS5qcyArIEV4cHJlc3MiewogICAgICAgICAgdGFnICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gRUtTIENsb3VkIgogICAgICB9CiAgICAgIAogICAgYXBpMiA9IGNvbnRhaW5lciAiQVBJIEJhY2tlbmQgMiIgIkzDs2dpY2EgZGUgbmVnb2NpbywgdmFsaWRhY2nDs24geSBjb25leGnDs24gY29uIElBIiAiTm9kZS5qcyArIEV4cHJlc3MiewogICAgICAgICAgdGFnICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gRUtTIENsb3VkIgogICAgICB9CiAgICAgIAogICAgYXBpMyA9IGNvbnRhaW5lciAiQVBJIEJhY2tlbmQgMyIgIkzDs2dpY2EgZGUgbmVnb2NpbywgdmFsaWRhY2nDs24geSBjb25leGnDs24gY29uIElBIiAiTm9kZS5qcyArIEV4cHJlc3MiewogICAgICAgICAgdGFnICJBbWF6b24gV2ViIFNlcnZpY2VzIC0gRUtTIENsb3VkIgogICAgICB9CiAgICAgIAogICAgICAKICAgICAgZGIgPSBjb250YWluZXIgIkJhc2UgZGUgRGF0b3MiICJHdWFyZGEgY2l0YXMsIHVzdWFyaW9zLCBkb2N1bWVudG9zIiAiUG9zdGdyZVNRTCIgewogICAgICAgIHRhZ3MgIkJEIgogICAgICB9CiAgICAgIGlhID0gY29udGFpbmVyICJTSVZJQSAtIFNpc3RlbWEgZGUgSW5zcGVjY2nDs24gVmlzdWFsIEF1dG9tYXRpemFkbyBwb3IgSUEiICJTZXJ2aWNpbyBkZSBJQSBwYXJhIHZhbGlkYXIgZm90b3MvZG9jdW1lbnRvcyIgIkFQSSBleHRlcm5hIChQeXRob24pIgoKICAgICAgcHJvcGlldGFyaW8gLT4gd2ViYXBwICJVdGlsaXphIGRlc2RlIG5hdmVnYWRvciIKICAgICAgICB3ZWJhcHAgLT4gZ3cgIkVucnV0YSBTb2xpY2l0dWRlcyIKICAgICAgICBndyAtPiBiYWxhbmNlYWRvciAiQmFsYW5jZWEgbGEgY2FyZ2EgZGUgc29saWNpdHVkZXMiCiAgICAgICAgICAgICAgICBiYWxhbmNlYWRvciAtPiBhcGkxICJCYWxhbmNlYSBsYSBjYXJnYSBkZSBzb2xpY2l0dWRlcyIKICAgICAgICAgICAgICAgIGJhbGFuY2VhZG9yIC0+IGFwaTIgIkJhbGFuY2VhIGxhIGNhcmdhIGRlIHNvbGljaXR1ZGVzIgogICAgICAgICAgICAgICAgYmFsYW5jZWFkb3IgLT4gYXBpMyAiQmFsYW5jZWEgbGEgY2FyZ2EgZGUgc29saWNpdHVkZXMiCiAgICAgIHRlY25pY28gLT4gZ3cgIkNvbnN1bHRhIGluZm9ybWFjacOzbiBkZSBjaXRhcyIKICAgICAgYXBpMSAtPiBkYiAiTGVlIHkgZ3VhcmRhIGRhdG9zIgogICAgICBhcGkxIC0+IGlhICJFbnbDrWEgaW3DoWdlbmVzIHBhcmEgdmFsaWRhY2nDs24iCiAgICAgICAgICAgIGFwaTIgLT4gZGIgIkxlZSB5IGd1YXJkYSBkYXRvcyIKICAgICAgYXBpMiAtPiBpYSAiRW52w61hIGltw6FnZW5lcyBwYXJhIHZhbGlkYWNpw7NuIiAgICAgIAogICAgICBhcGkzIC0+IGRiICJMZWUgeSBndWFyZGEgZGF0b3MiCiAgICAgIGFwaTMgLT4gaWEgIkVudsOtYSBpbcOhZ2VuZXMgcGFyYSB2YWxpZGFjacOzbiIKICAgIH0KICB9CgogIHZpZXdzIHsKICAgIHN5c3RlbUNvbnRleHQgc2lzdGVtYSB7CiAgICAgIGluY2x1ZGUgKgogICAgICBhdXRvbGF5b3V0IGxyCiAgICAgIGRlc2NyaXB0aW9uICJEaWFncmFtYSBkZSBjb250ZXh0byBkZWwgc2lzdGVtYSBkZSBhZ2VuZGFtaWVudG8gUlRNIgogICAgfQoKICAgIGNvbnRhaW5lciBzaXN0ZW1hIHsKICAgICAgaW5jbHVkZSAqCiAgICAgIGF1dG9sYXlvdXQgbHIKICAgICAgZGVzY3JpcHRpb24gIkRpYWdyYW1hIGRlIGNvbnRlbmVkb3JlczogZXN0cnVjdHVyYSBpbnRlcm5hIGRlbCBzaXN0ZW1hIgogICAgfQoKICAgIHN0eWxlcyB7CiAgICAgIGVsZW1lbnQgIlNvZnR3YXJlIFN5c3RlbSIgewogICAgICAgIGJhY2tncm91bmQgIzgwMTUxNQogICAgICAgIHNoYXBlIFJvdW5kZWRCb3gKICAgICAgICBpY29uIGh0dHBzOi8vY2RuLWljb25zLXBuZy5mbGF0aWNvbi5jb20vNTEyLzg3NTkvODc1OTA2OS5wbmcKICAgICAgfQoKICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgYmFja2dyb3VuZCAjZDQ2YTZhCiAgICAgICAgY29sb3VyICMwMDAwMDAKICAgICAgICBzaGFwZSBQZXJzb24KICAgICAgfQoKICAgICAgZWxlbWVudCAiUHJvcGlldGFyaW8iIHsKICAgICAgICBzaGFwZSBQZXJzb24KICAgICAgICBiYWNrZ3JvdW5kICNmNGQwM2YKICAgICAgfQoKICAgICAgZWxlbWVudCAiVGVjbmljbyIgewogICAgICAgIHNoYXBlIFJvYm90CiAgICAgICAgYmFja2dyb3VuZCAjNzZkN2M0CiAgICAgIH0KICAgICAgCiAgICBlbGVtZW50ICJCRCIgewogICAgICAgIHNoYXBlIEN5bGluZGVyCiAgICAgICAgYmFja2dyb3VuZCAjM2I1OTk4CiAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICB9CgogICAgICByZWxhdGlvbnNoaXAgIlJlbGF0aW9uc2hpcCIgewogICAgICAgIGRhc2hlZCBmYWxzZQogICAgICB9CiAgICB9CiAgICAKICAgIHRoZW1lIGh0dHBzOi8vc3RhdGljLnN0cnVjdHVyaXpyLmNvbS90aGVtZXMvYW1hem9uLXdlYi1zZXJ2aWNlcy0yMDIzLjAxLjMxL3RoZW1lLmpzb24KCiAgfQoKfQo="
+    "structurizr.dsl" : "d29ya3NwYWNlICJOYW1lIiAiRGVzY3JpcHRpb24iIHsNCg0KICAgICFpZGVudGlmaWVycyBoaWVyYXJjaGljYWwNCg0KICAgIG1vZGVsIHsNCiAgICAgICAgdSA9IHBlcnNvbiAiVXNlciINCiAgICAgICAgc3MgPSBzb2Z0d2FyZVN5c3RlbSAiU29mdHdhcmUgU3lzdGVtIiB7DQogICAgICAgICAgICB3YSA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIg0KICAgICAgICAgICAgZGIgPSBjb250YWluZXIgIkRhdGFiYXNlIFNjaGVtYSIgew0KICAgICAgICAgICAgICAgIHRhZ3MgIkRhdGFiYXNlIg0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQoNCiAgICAgICAgdSAtPiBzcy53YSAiVXNlcyINCiAgICAgICAgc3Mud2EgLT4gc3MuZGIgIlJlYWRzIGZyb20gYW5kIHdyaXRlcyB0byINCiAgICB9DQoNCiAgICB2aWV3cyB7DQogICAgICAgIHN5c3RlbUNvbnRleHQgc3MgIkRpYWdyYW0xIiB7DQogICAgICAgICAgICBpbmNsdWRlICoNCiAgICAgICAgICAgIGF1dG9sYXlvdXQgbHINCiAgICAgICAgfQ0KDQogICAgICAgIGNvbnRhaW5lciBzcyAiRGlhZ3JhbTIiIHsNCiAgICAgICAgICAgIGluY2x1ZGUgKg0KICAgICAgICAgICAgYXV0b2xheW91dCBscg0KICAgICAgICB9DQoNCiAgICAgICAgc3R5bGVzIHsNCiAgICAgICAgICAgIGVsZW1lbnQgIkVsZW1lbnQiIHsNCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmDQogICAgICAgICAgICB9DQogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsNCiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwNTUyN2QNCiAgICAgICAgICAgICAgICBzaGFwZSBwZXJzb24NCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGVsZW1lbnQgIlNvZnR3YXJlIFN5c3RlbSIgew0KICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzA2NjI5Ng0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgZWxlbWVudCAiQ29udGFpbmVyIiB7DQogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDc3M2FmDQogICAgICAgICAgICB9DQogICAgICAgICAgICBlbGVtZW50ICJEYXRhYmFzZSIgew0KICAgICAgICAgICAgICAgIHNoYXBlIGN5bGluZGVyDQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICB9DQoNCiAgICBjb25maWd1cmF0aW9uIHsNCiAgICAgICAgc2NvcGUgc29mdHdhcmVzeXN0ZW0NCiAgICB9DQoNCn0="
   },
   "views" : {
     "configuration" : {
       "branding" : { },
-      "lastSavedView" : "SystemContext-001",
+      "lastSavedView" : "Diagram1",
       "metadataSymbols" : "SquareBrackets",
       "styles" : {
         "elements" : [ {
-          "background" : "#801515",
-          "icon" : "https://cdn-icons-png.flaticon.com/512/8759/8759069.png",
-          "shape" : "RoundedBox",
-          "tag" : "Software System"
+          "color" : "#ffffff",
+          "tag" : "Element"
         }, {
-          "background" : "#d46a6a",
-          "color" : "#000000",
+          "background" : "#05527d",
           "shape" : "Person",
           "tag" : "Person"
         }, {
-          "background" : "#f4d03f",
-          "shape" : "Person",
-          "tag" : "Propietario"
+          "background" : "#066296",
+          "tag" : "Software System"
         }, {
-          "background" : "#76d7c4",
-          "shape" : "Robot",
-          "tag" : "Tecnico"
+          "background" : "#0773af",
+          "tag" : "Container"
         }, {
-          "background" : "#3b5998",
-          "color" : "#ffffff",
           "shape" : "Cylinder",
-          "tag" : "BD"
-        } ],
-        "relationships" : [ {
-          "dashed" : false,
-          "tag" : "Relationship"
+          "tag" : "Database"
         } ]
       },
-      "terminology" : { },
-      "themes" : [ "https://static.structurizr.com/themes/amazon-web-services-2023.01.31/theme.json" ]
+      "terminology" : { }
     },
     "containerViews" : [ {
       "automaticLayout" : {
@@ -267,80 +105,28 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "description" : "Diagrama de contenedores: estructura interna del sistema",
       "elements" : [ {
         "id" : "1",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "2",
+        "id" : "3",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "6",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "7",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "8",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "9",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "10",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "11",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "12",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "13",
+        "id" : "4",
         "x" : 0,
         "y" : 0
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
-      "generatedKey" : true,
-      "key" : "Container-001",
+      "key" : "Diagram2",
       "order" : 2,
       "relationships" : [ {
-        "id" : "14"
+        "id" : "5"
       }, {
-        "id" : "15"
-      }, {
-        "id" : "16"
-      }, {
-        "id" : "17"
-      }, {
-        "id" : "18"
-      }, {
-        "id" : "19"
-      }, {
-        "id" : "20"
-      }, {
-        "id" : "21"
-      }, {
-        "id" : "22"
-      }, {
-        "id" : "23"
-      }, {
-        "id" : "24"
-      }, {
-        "id" : "25"
-      }, {
-        "id" : "26"
+        "id" : "7"
       } ],
-      "softwareSystemId" : "3"
+      "softwareSystemId" : "2"
     } ],
     "systemContextViews" : [ {
       "automaticLayout" : {
@@ -352,34 +138,26 @@
         "rankSeparation" : 300,
         "vertices" : false
       },
-      "description" : "Diagrama de contexto del sistema de agendamiento RTM",
       "dimensions" : {
-        "height" : 1500,
+        "height" : 800,
         "width" : 1550
       },
       "elements" : [ {
         "id" : "1",
-        "x" : 200,
-        "y" : 151
+        "x" : 199,
+        "y" : 165
       }, {
         "id" : "2",
-        "x" : 200,
-        "y" : 851
-      }, {
-        "id" : "3",
-        "x" : 900,
-        "y" : 551
+        "x" : 899,
+        "y" : 215
       } ],
       "enterpriseBoundaryVisible" : true,
-      "generatedKey" : true,
-      "key" : "SystemContext-001",
+      "key" : "Diagram1",
       "order" : 1,
       "relationships" : [ {
-        "id" : "4"
-      }, {
-        "id" : "5"
+        "id" : "6"
       } ],
-      "softwareSystemId" : "3"
+      "softwareSystemId" : "2"
     } ]
   }
 }
