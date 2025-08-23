@@ -1,6 +1,6 @@
-# 1. Estrategia de autenticación
+# 1. Estrategia de autenticación - Cristian Valencia
 
-**Date:** 2025-08-20  
+Date: 2025-08-10
 
 ## Status
 
@@ -16,4 +16,5 @@ Adoptar AWS Cognito para gestión de identidad y autenticación.
 
 ## Consequences
 
-Seguridad reforzada. Dependencia adicional de servicios AWS.
+* Seguridad reforzada. 
+* Dependencia adicional de servicios AWS.

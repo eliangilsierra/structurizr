@@ -38,10 +38,8 @@
           echo "✅ WAR verificado correctamente ($SIZE bytes)"
 
           echo "🚀 Iniciando Structurizr en puerto 8080..."
-          java -Dserver.port=8080 \
-               -Dstructurizr.apiKey=abc123 \
-               -Dstructurizr.allowInsecure=true \
-               -jar structurizr-lite.war ./workspace > structurizr.log 2>&1 &
+          java -Dserver.port=8080 -Duser.timezone=America/Bogota -Dstructurizr.apiKey=abc123 -Dstructurizr.allowInsecure=true -jar structurizr-lite.war ./workspace > structurizr.log 2>&1 &
+
 
           sleep 5
 

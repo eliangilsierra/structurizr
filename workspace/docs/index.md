@@ -56,8 +56,6 @@ La automatización de la revisión técnico‑mecánica (RTM) busca **reducir ti
 * **Protección de Datos** (Habeas Data / Ley de datos personales): consentimiento, minimización, retención y anonimización/pseudonimización de evidencias.
 * **Seguridad**: Gestión de identidades, cifrado en tránsito y en reposo, registros de auditoría, controles de acceso con mínima privilegio.
 
-> Nota: Se elaborará una **matriz de trazabilidad regulatoria** que mapea requisitos normativos ⇄ procesos ⇄ controles técnicos.
-
 **Referencia normativa clave:** NTC 5375 (énfasis en **6.1 Revisión exterior** y **6.4 Alumbrado y señalización**). Consulta: [https://bogota.gov.co/sites/default/files/tys/2017/11/ntc-5375.pdf](https://bogota.gov.co/sites/default/files/tys/2017/11/ntc-5375.pdf)
 
 ---
@@ -183,23 +181,10 @@ La automatización de la revisión técnico‑mecánica (RTM) busca **reducir ti
   *Descripción:* Muestra los principales contenedores: Frontend, API Gateway, Load Balancer, APIs en EKS, DB y SIVIA.
 
 * ![Vista de Componentes Frontend](embed:VistaFrontend)  
-  *Descripción:* Detalle de los componentes de la aplicación web (Cliente, Técnico, Director y Cliente API).
+  *Descripción:* Detalle de los componentes de la aplicación web (Cliente, Técnico, Director y Cliente API). ***Cristian Valencia***
 
 * ![Vista de Componentes Backend](embed:VistaBackend)  
-  *Descripción:* Detalle de la API de Negocio (controladores de citas/inspección, servicio de validación, cliente SIVIA, repositorio).
-
----
-
-### Componentes Complementarios Recomendados
-
-* **Servicio de Firma y Sellado de Tiempo**, **Motor de Reglas** (NTC), **Servicio de Plantillas PDF**, **Servicio de Notificaciones** (email/SMS/push), **Servicio de Auditoría Inmutable** (p. ej., tablas append-only / ledger).  
-
----
-
-### Topología de Red
-
-* **VPC** con subredes públicas/privadas, **Security Groups** por rol, **NAT** para salidas controladas, endpoints VPC para S3/RDS.  
-* Restricción de acceso a **DB** solo desde pods autorizados.  
+  *Descripción:* Detalle de la API de Negocio (controladores de citas/inspección, servicio de validación, cliente SIVIA, repositorio). ***Elian Gil***
 
 ---
 
@@ -240,8 +225,6 @@ Entidades clave y relaciones (resumen):
 * **SIVIA/ResultadoIA** (modelo, versión, confianza, etiquetas/defectos, anexos).
 * **Usuario/Rol** (permisos granulares).
 * **Certificado** (estado, firma, hash, sellado).
-
-> Se adjuntará diagrama ER detallado en anexo técnico.
 
 ---
 
@@ -309,26 +292,6 @@ Entidades clave y relaciones (resumen):
 
 ---
 
-## Procesos y Secuencias
-
-* **\[COLOCA AQUÍ IMG: Diagrama de Actividades/Swimlanes – actdiag]**
-  *Descripción:* Flujo de propietario → SIVIA → Director con validaciones y notificaciones.
-
-* **\[COLOCA AQUÍ IMG: Diagrama de Secuencia – Mermaid]**
-  *Descripción:* Eventos 1..11a/11b con ramas de aprobación o rechazo.
-
-* **\[COLOCA AQUÍ IMG: Diagrama de Secuencia (Integración) – seqdiag]**
-  *Descripción:* Interacciones Propietario, SIVIA, Base de Datos, Cámaras, Motor IA, Director.
-
----
-
-## Modelo de Dominio (UML)
-
-* **\[COLOCA AQUÍ IMG: Diagrama de Clases – Mermaid]**
-  *Descripción:* Entidades `Vehiculo`, `Propietario`, `Inspeccion`, `Checklist`, `Pago`, `Notificacion`, `SIVIA`, `MotorIA`, `DirectorCDA` y relaciones.
-
----
-
 ## Seguridad, Privacidad y Cumplimiento
 
 * **Identidades y Accesos:** OIDC/OAuth2, MFA para perfiles críticos (Director/Operaciones).
@@ -337,52 +300,6 @@ Entidades clave y relaciones (resumen):
 * **Logs/Auditoría:** inmutables, con hash por lote de evidencias; retención regulada.
 * **Protección de Datos:** consentimiento informado, políticas de retención mínima, anonimización de placas cuando no sean necesarias post‑proceso.
 * **WAF y Anti‑fraude:** reglas OWASP, rate limiting, validación de contenidos en carga.
-
----
-
-## Operación, Observabilidad y DR
-
-* **Monitoreo:** métricas de infraestructura (CPU, RAM, EKS), métricas de negocio (tiempos de RTM, cola, conversión de pagos), métricas de IA (confianza media, drift).
-* **Alertas:** umbrales en SLIs/SLOs (latencia, tasa de errores, disponibilidad).
-* **Backups:** RDS diarios; S3 con versionado y políticas de ciclo de vida.
-* **DR:** multi‑AZ; pruebas semestrales de recuperación.
-
----
-
-## DevSecOps y Calidad
-
-* **Repositorio monorepo o polyrepo** con convenciones; **CI/CD** (GitHub Actions/GitLab CI).
-* **SAST/DAST/Dependabot**; análisis de contenedores; políticas de firma de imágenes.
-* **Infraestructura como Código:** Terraform/CloudFormation.
-* **Pruebas:** unitarias, contract‑testing (PACT), e2e (Playwright/Cypress), pruebas de carga (k6), pruebas de seguridad (OWASP ZAP).
-* **Release Management:** versionado semántico; feature flags; **canary**.
-
----
-
-## Plan de Pruebas y Validación de Campo
-
-* **Piloto** en 1 línea de inspección con tipos de vehículo representativos.
-* **UAT** con técnicos y Director; checklist de aceptación por criterio NTC.
-* **Medición comparativa** contra proceso actual (tiempos, variabilidad, satisfacción).
-* **Reporte de resultados** y plan de escalado progresivo.
-
----
-
-## Roadmap y Entregables (12 meses sugeridos)
-
-**Fase 0 (2–4 sem):** Descubrimiento, línea base, acuerdos regulatorios, diseño detallado.
-**Fase 1 (8–10 sem):** MVP (CU‑01 a CU‑04, IA básica para 6.1).
-**Fase 2 (8–10 sem):** Extensión a 6.4, tablero Director, auditoría avanzada.
-**Fase 3 (8–10 sem):** Optimización, analítica, firma/sello, integraciones externas.
-**Go‑Live escalonado** por líneas de inspección.
-
-**Entregables:**
-
-* Documento de arquitectura y seguridad (este).
-* Contratos de API + catálogos de eventos.
-* Guías operativas, de soporte y DR.
-* Dataset y guía de etiquetado.
-* Manuales de usuario (Propietario/Técnico/Director).
 
 ---
 
@@ -432,18 +349,6 @@ Entidades clave y relaciones (resumen):
 
 ---
 
-## Matriz de Trazabilidad (extracto)
-
-| Requisito | Caso de Uso | Componente                         | Evidencia                                 | Criterio de Aceptación                          |
-| --------- | ----------- | ---------------------------------- | ----------------------------------------- | ----------------------------------------------- |
-| RF‑01     | CU‑01       | Web/Agendamiento, API Citas, Pagos | Log de validación SOAT, recibo            | Cita confirmada si SOAT vigente y pago aprobado |
-| RF‑03     | CU‑03       | SIVIA, API Inspecciones            | Registro de tipología, checklist aplicado | Tipología correcta ≥ 98%                        |
-| RF‑04     | CU‑03/04    | SIVIA, Motor de Reglas             | Reporte con defectos y severidad          | mAP ≥ umbral; reglas NTC aplicadas              |
-| RF‑07     | CU‑04       | Panel Director                     | Decisión registrada y firmada             | Certificado emitido/rechazado                   |
-| RF‑09     | Todos       | Auditoría                          | Línea de tiempo completa                  | 100% eventos críticos trazables                 |
-
----
-
 ## Historias de Usuario (ejemplos con criterios Gherkin)
 
 **HU‑01** Como *Propietario* quiero agendar y pagar mi RTM para no hacer filas.
@@ -489,7 +394,7 @@ Y obtengo pre‑calificación por criterio con nivel de confianza
 ## Criterios de Aceptación (muestra)
 
 * Si el **SOAT** está vigente, se **confirma** la cita; si no, se **rechaza** y notifica.
-* Para **motocicleta**, SIVIA aplica el **checklist** correspondiente y registra evidencias.
+* Para **automovil**, SIVIA aplica el **checklist** correspondiente y registra evidencias.
 * Cada hallazgo genera **imagen**, **clasificación** (menor/mayor), **timestamp** y **usuario responsable**.
 * Las **notificaciones** reflejan estados: *en inspección*, *hallazgos*, *aprobado/rechazado*, *reporte disponible*.
 

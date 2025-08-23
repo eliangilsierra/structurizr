@@ -1,6 +1,6 @@
-# 2. Elección del motor de base de datos relacional para el sistema CDA
+# 2. Elección del motor de base de datos relacional para el sistema CDA - Elian Gil
 
-**Date:** 2025-08-22  
+Date: 2025-08-22  
 
 ## Status  
 Accepted  

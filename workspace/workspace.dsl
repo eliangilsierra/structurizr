@@ -72,7 +72,7 @@ workspace "Automatización Revision Tecnico Mecanica" "Modelo de arquitectura C4
                 validacionService -> this "Consulta validez de SOAT" "SOAP/REST"
             }
             CamaraSET = softwareSystem "Set de Cámaras" "Set de Cámaras para inspección visual" "Existing System" {
-                validacionService -> this "Capturan imágenes para procesamiento"
+                inspeccionController -> this "Capturan imágenes para procesamiento"
             }
         }
 
@@ -120,6 +120,9 @@ workspace "Automatización Revision Tecnico Mecanica" "Modelo de arquitectura C4
 views {
     properties {
         "plantuml.url" "https://plantuml.com/plantuml"
+        "structurizr.metadata" "false"
+        "structurizr.title" "false"
+        "structurizr.description" "false"
     }
 
     systemContext sistema VistaContexto "Diagrama de contexto del SIVIA." {
@@ -132,7 +135,7 @@ views {
         autoLayout tb
     }
 
-    component webapp VistaFrontend "Componentes de la aplicación web." {
+    component webapp VistaFrontend "Componentes de la aplicación web. Cristian Valencia" {
         include *
         autoLayout tb
     }

@@ -1,6 +1,6 @@
-# 3. Cambio del Framework del Frontend
+# 3. Cambio del Framework del Frontend - Cristian Valencia
 
-**Date:** 2025-10-22  
+Date: 2025-10-22  
 
 ## Status
 
@@ -12,8 +12,8 @@ El equipo de desarrollo manifestó experiencia previa en Angular además de Reac
 
 ## Decision
 
-Incorporar Angular en la arquitectura
+Se continúa con React, pero se incorpora Next.js para Optimización.
 
 ## Consequences
 
-No se requiere aprendizaje adicional para el equipo.
+Mayor rendimiento en vistas públicas y una curva de aprendizaje adicional.

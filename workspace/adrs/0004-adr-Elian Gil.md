@@ -1,6 +1,6 @@
-# 4. Estrategia multi-nube para el módulo de IA
+# 4. Estrategia multi-nube para el módulo de IA - Elian Gil
 
-**Date:** 2026-02-22  
+Date: 2025-06-06  
 
 ## Status  
 Proposed  
